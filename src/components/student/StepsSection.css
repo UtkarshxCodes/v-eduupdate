@@ -1,0 +1,125 @@
+.steps {
+  background-image: url("/steps-bg.png"); /* Correct path for public folder */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 1rem; /* Increase padding for spacing */
+  min-height: 400px; /* Ensure enough height for the background image */
+}
+
+.steps__container {
+  text-align: center;
+}
+
+.section__header {
+  font-size: 2rem; /* Default size for desktop */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.section__header span {
+  color: #007bff; /* Highlighted text in blue */
+}
+
+.section__description {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.steps__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default layout for desktop */
+  gap: 2rem; /* Add spacing between cards */
+}
+
+.steps__card {
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+  text-align: center; /* Center content for mobile view */
+}
+
+.steps__card span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 5px 11px;
+  font-size: 1.5rem;
+  border-radius: 100%;
+}
+
+.steps__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.steps__card p {
+  color: var(--text-light);
+  font-size: 0.875rem; /* Smaller text for mobile view */
+}
+
+.steps__card:hover {
+  background-color: #6a38c2; /* var(--primary-color) */
+  color: var(--white);
+}
+
+.steps__card:hover span {
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+  .section__header {
+    font-size: 1.75rem; /* Slightly smaller heading for tablets */
+  }
+
+  .section__description {
+    font-size: 1rem; /* Adjust description size for tablets */
+  }
+
+  .steps__grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    gap: 1.5rem; /* Reduce spacing between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .section__header {
+    font-size: 1.5rem; /* Smaller heading for mobile screens */
+  }
+
+  .section__description {
+    font-size: 0.875rem; /* Smaller description for mobile screens */
+  }
+
+  .steps__grid {
+    grid-template-columns: 1fr; /* Single column for mobile screens */
+    gap: 1rem; /* Reduce spacing between cards */
+  }
+
+  .steps__card {
+    padding: 1rem; /* Reduce padding for mobile screens */
+  }
+
+  .steps__card span {
+    font-size: 1.25rem; /* Smaller icon size for mobile screens */
+  }
+
+  .steps__card h4 {
+    font-size: 1rem; /* Adjust heading size for mobile screens */
+  }
+
+  .steps__card p {
+    font-size: 0.75rem; /* Smaller text for mobile screens */
+  }
+}

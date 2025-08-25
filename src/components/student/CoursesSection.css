@@ -1,0 +1,60 @@
+/* Grid Layout for Course Cards */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 32px; /* Space between cards */
+  justify-items: center; /* Center align cards horizontally */
+  align-items: stretch; /* Ensure all cards have equal height */
+}
+
+/* Default Course Card Styling */
+.course-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 420px; /* Increase card width */
+  height: 550px; /* Increase card height */
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Video Styling */
+.course-card video {
+  width: 100%;
+  height: 300px; /* Increase video height */
+  object-fit: contain; /* Prevent cropping */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+    gap: 24px; /* Adjust gap for smaller screens */
+  }
+
+  .course-card {
+    width: 350px; /* Adjust card width for smaller screens */
+    height: 500px; /* Adjust card height for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr; /* 1 card per row for mobile */
+    gap: 16px; /* Reduce gap for mobile */
+  }
+
+  .course-card {
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Allow height to adjust for mobile */
+  }
+}

@@ -1,0 +1,79 @@
+@layer components {
+  .nav-link {
+    /* Remove text-gray-700, set dark blue explicitly */
+    @apply hover:text-blue-600 transition-colors cursor-pointer font-medium bg-transparent border-none outline-none;
+    color: #1e3a8a !important; /* force dark blue */
+  }
+  .dropdown-item {
+    @apply text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md transition;
+  }
+}
+
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  font-weight: 500;
+  color: #1e3a8a; /* dark blue */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 101;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #2563eb; /* blue on hover/focus */
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+.dropdown-card {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 10px 0;
+  min-width: 240px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 200;
+}
+
+.group:hover .dropdown-card {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  color: #111827; /* black */
+  background: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
