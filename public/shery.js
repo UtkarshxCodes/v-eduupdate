@@ -23,7 +23,7 @@ Shery.imageEffect("#back", {
     "scrollType": { "value": 0 },
     "geoVertex": { "range": [1, 64], "value": 1 },
     "noEffectGooey": { "value": false },
-    "onMouse": { "value": 0}, // Default value
+    "onMouse": { "value": 1}, // Default value
     "noise_speed": { "value": 1.53, "range": [0, 10] },
     "metaball": { "value": 0.21, "range": [0, 2], "_gsap": { "id": 3 } },
     "discard_threshold": { "value": 0.74, "range": [0, 1] },
