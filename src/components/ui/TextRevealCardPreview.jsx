@@ -10,13 +10,12 @@ export function TextRevealCardPreview() {
   return (
     <div
       className="flex items-center justify-center bg-[#ffffff] h-[40rem] rounded-2xl w-full">
-      <TextRevealCard text="You know the business  &" revealText="I know the chemistry ">
+      <TextRevealCard text="You bring ambition. &" revealText="We bring the learning. ">
         <TextRevealCardTitle>
-          Sometimes, you just need to see it.
+         ✨ Sometimes, you just need to see it.
         </TextRevealCardTitle>
         <TextRevealCardDescription>
-          This is a text reveal card. Hover over the card to reveal the hidden
-          text.
+        The shortcut from learning to earning
         </TextRevealCardDescription>
       </TextRevealCard>
     </div>

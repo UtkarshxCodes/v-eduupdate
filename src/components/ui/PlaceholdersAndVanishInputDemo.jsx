@@ -17,12 +17,15 @@ export function PlaceholdersAndVanishInputDemo() {
   const onSubmit = (e) => {
     e.preventDefault();
     console.log("submitted");
+    setTimeout(() => {
+      window.open("tel:+18883444990");
+    }, 7000); // 7 seconds delay
   };
   return (
     <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
       <h2
-        className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
-        Ask Aceternity UI Anything
+        className="mb-10 sm:mb-20 text-l text-center sm:text-5xl dark:text-white text-black">
+    Thanos snapped… but don’t worry our number still survived 😎
       </h2>
       <PlaceholdersAndVanishInput placeholders={placeholders} onChange={handleChange} onSubmit={onSubmit} />
     </div>

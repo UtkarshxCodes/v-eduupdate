@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './JobPostingSection.css';
+import Footer from '../../components/student/Footer';
 
 const jobs = [
 	{
@@ -322,8 +323,10 @@ const JobPostingSection = () => (
 					</div>
 				</Link>
 			))}
+			
 		</div>
 	</section>
+	
 );
 
 export default JobPostingSection;

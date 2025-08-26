@@ -1,7 +1,7 @@
 "use client";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 
-const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
+const words = `Opportunities don’t knock forever. In waiting, you risk drifting — calm, uncertain, hoping the right door opens. But the truth is clear: the future belongs to those who build it. At V-EDU, every skill learned is a step forward, every project a new door unlocked. The decision is yours — wait for the opportunity, or create it right here, right now.
 `;
 
 export function TextGenerateEffectDemo() {

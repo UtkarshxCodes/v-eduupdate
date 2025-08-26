@@ -30,7 +30,12 @@ import EnrollNowModal from './components/student/EnrollNowModal';
 import PaymentsEnroll from './pages/student/PaymentsEnroll';
 import JobPostingSection from './components/student/JobPostingSection';
 import Apply from './components/student/apply';
-
+import Payments from './components/student/payments';
+import Articles from './components/student/articles';
+import Webinars from './components/student/webinars';
+import Guides from './components/student/guides';
+import Success from './components/student/success';
+import Trends from './components/student/trends';
 const App = () => {
   const [showRegistration, setShowRegistration] = useState(false);
   const [formData, setFormData] = useState({
@@ -97,6 +102,13 @@ const App = () => {
         <Route path="/payments-enroll" element={<PaymentsEnroll />} />
         <Route path="/job-openings" element={<JobPostingSection />} />
         <Route path="/apply" element={<Apply />} />
+        <Route path="/payments" element={<Payments />} />
+        <Route path="/resources/webinars" element={<Webinars />} />
+        <Route path="/resources/articles" element={<Articles />} />
+        <Route path="/resources/guides" element={<Guides />} />
+        <Route path="/resources/success" element={<Success />} />
+        <Route path="/resources/trends" element={<Trends />} />
+
       </Routes>
       <CourseRegistration
         isOpen={showRegistration}

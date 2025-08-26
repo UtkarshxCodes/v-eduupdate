@@ -4,7 +4,7 @@ import "./Aboutus.css";
 import { HeroScrollDemo } from "../ui/HeroScrollDemo";
 import { StickyScrollRevealDemo } from "../ui/StickyScrollRevealDemo";
 import { BentoGridThirdDemo } from "../ui/BentoGridThirdDemo";
-
+import Footer from '../../components/student/Footer';
 import { WorldMapDemo } from "../ui/WorldMapDemo";
 const AboutUs = () => {
   const [currentImageIndex1, setCurrentImageIndex1] = useState(0);
@@ -160,54 +160,57 @@ const AboutUs = () => {
 
  <BentoGridThirdDemo />
             
-            {/* Reach Us Section */}
-<section className="reach-us w-full flex flex-col items-center mb-12 px-4">
-  <h2 className="text-2xl md:text-4xl font-bold text-blue-900 mb-4 text-center">Reach Us At</h2>
-  <a
-    href="https://maps.app.goo.gl/1vyuEaeJJcEBBPEz8"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full flex justify-center"
-  >
-    <img
-      src={assets.map}
-      alt="V-edu.us Map View"
-      className="map-image w-full max-w-2xl rounded-xl shadow-lg"
-      style={{ objectFit: "cover" }}
-    />
-  </a>
-</section>
-
-{/* Contact Info Section */}
-<section className="contact-info w-full flex flex-col md:flex-row items-center justify-center gap-8 px-4 mb-12">
-  <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow border border-blue-200 dark:border-blue-800 p-6 w-full max-w-md">
-    <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 text-center">Contact Us</h2>
-    <div className="space-y-3 text-base md:text-lg text-neutral-700 dark:text-neutral-200">
-      <p>
-        <strong>Phone:</strong>{" "}
-        <a href="tel:+18883444990" className="text-blue-700 underline break-all">
-          +1 888-344-4990
-        </a>
-      </p>
-      <p>
-        <strong>Email:</strong>{" "}
-        <a href="mailto:support@v-edu.us" className="text-blue-700 underline break-all">
-          support@v-edu.us
-        </a>
-      </p>
-      <p>
-        <strong>Address:</strong>
-        <br />
-        1908 Thomes Ave STE 12363,
-        <br />
-        Cheyenne, WY 82001
-      </p>
+            {/* Reach Us & Contact Info Side by Side */}
+<section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 px-4 mb-12 ">
+  {/* Map Section */}
+  <div className="flex-1 flex flex-col items-center ml-9">
+    <h2 className="text-2xl md:text-4xl font-bold text-blue-900 mb-4 text-center"></h2>
+    <a
+      href="https://maps.app.goo.gl/1vyuEaeJJcEBBPEz8"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full flex justify-center"
+    >
+      <img
+        src={assets.map}
+        alt="V-edu.us Map View"
+        className="map-image w-full max-w-2xl rounded-xl shadow-lg"
+        style={{ objectFit: "cover" }}
+      />
+    </a>
+  </div>
+  {/* Contact Info Section */}
+  <div className="flex-1 flex flex-col items-center">
+    <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow border border-blue-200 dark:border-blue-800 p-6 w-full max-w-md">
+      <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 text-center">Contact Us</h2>
+      <div className="space-y-3 text-base md:text-lg text-neutral-700 dark:text-neutral-200">
+        <p>
+          <strong>Phone:</strong>{" "}
+          <a href="tel:+18883444990" className="text-blue-700 underline break-all">
+            +1 888-344-4990
+          </a>
+        </p>
+        <p>
+          <strong>Email:</strong>{" "}
+          <a href="mailto:support@v-edu.us" className="text-blue-700 underline break-all">
+            support@v-edu.us
+          </a>
+        </p>
+        <p>
+          <strong>Address:</strong>
+          <br />
+          1908 Thomes Ave STE 12363,
+          <br />
+          Cheyenne, WY 82001
+        </p>
+      </div>
     </div>
   </div>
 </section>
           </div>
        
       </div>
+        <Footer />
     </div>
   );
 };
