@@ -69,7 +69,7 @@ const CourseRegistration = () => {
           {/* Offer Banner with Countdown */}
           <div className="flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-blue-700 to-cyan-500 rounded-xl px-4 py-3 sm:py-5 text-white shadow-md w-full">
             <span className="text-lg sm:text-2xl font-extrabold tracking-wide">
-              🎉 Limited Time Offer - 35% OFF
+              🎉 Limited Time Offer - 25% OFF
             </span>
             <div className="flex gap-2 sm:gap-4 mt-2 sm:mt-0 text-base sm:text-xl font-bold items-center">
               <span className="inline-flex items-center gap-1">
@@ -81,7 +81,7 @@ const CourseRegistration = () => {
                 <span>:</span>
                 <span className="bg-white/20 rounded px-2 py-1">{timeLeft.seconds}s</span>
               </span>
-              <span className="ml-2 text-xs sm:text-sm font-normal">Hurry! Offer resets every 4 days ⏳</span>
+              <span className="ml-2 text-xs sm:text-sm font-normal">Hurry! Offer Valid till⏳</span>
             </div>
           </div>
 
