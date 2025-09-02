@@ -186,8 +186,8 @@ const AboutUs = () => {
       <div className="space-y-3 text-base md:text-lg text-neutral-700 dark:text-neutral-200">
         <p>
           <strong>Phone:</strong>{" "}
-          <a href="tel:+18883444990" className="text-blue-700 underline break-all">
-            +1 888-344-4990
+          <a href="tel:(307)-216-4424" className="text-blue-700 underline break-all">
+           (307)-216-4424
           </a>
         </p>
         <p>

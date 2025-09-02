@@ -27,7 +27,7 @@ const Hero = () => {
 
       {/* Call Us Button */}
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20">
-        <a href="tel:+18883444990">
+        <a href="tel:(307)-216-4424">
           <button className="call-us-btn px-8 py-3 rounded-md font-bold">
             Call Us
           </button>

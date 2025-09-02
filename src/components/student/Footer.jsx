@@ -139,8 +139,8 @@ const Footer = () => {
           <div className="flex flex-col md:items-start items-center w-full">
             <h2 className="font-bold text-black mb-5 text-lg">Contact</h2>
             <p className="text-base text-blue-900 font-semibold mb-2">
-              <a href="tel:+18883444990" className="hover:text-blue-700 transition">
-                Phone: +1 888-344-4990
+              <a href="tel:(307)-216-4424" className="hover:text-blue-700 transition">
+                Phone:(307)-216-4424
               </a>
             </p>
             <p className="text-base text-blue-900 font-semibold mb-2">

@@ -90,14 +90,31 @@ export const HeroParallax = ({ products }) => {
 };
 
 export const Header = () => (
-  <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-    <h1 className="text-2xl md:text-5xl font-bold dark:text-white">
-      From Learning to Earning — <br />V-EDU accelerates your career with expert-led bootcamps and real job support.
+  <div className="max-w-7xl relative mx-auto py-8 md:py-40 px-2 sm:px-4 w-full left-0 top-0">
+    <h1 className="text-base xs:text-lg sm:text-2xl md:text-5xl font-bold dark:text-white leading-snug sm:leading-tight break-words">
+      <span className="block sm:inline">
+        From Learning to Earning —
+      </span>
+      <span className="block sm:inline">
+        V-EDU accelerates your career
+      </span>
+      <span className="block sm:inline">
+        with expert-led bootcamps
+      </span>
+      <span className="block sm:inline">
+        and real job support.
+      </span>
     </h1>
-    <p className="max-w-2xl text-base md:text-xl mt-8 darkblue:text-neutral-200">
-      V-EDU is where ambition meets opportunity. 
-      Get expert-led training, hands-on projects, 
-      and 100% placement assistance to launch your career.
+    <p className="max-w-xs sm:max-w-2xl text-xs xs:text-sm sm:text-base md:text-xl mt-4 sm:mt-8 darkblue:text-neutral-200 leading-normal sm:leading-relaxed break-words">
+      <span className="block sm:inline">
+        V-EDU is where ambition meets opportunity.
+      </span>
+      <span className="block sm:inline">
+        Get expert-led training, hands-on projects,
+      </span>
+      <span className="block sm:inline">
+        and 100% placement assistance to launch your career.
+      </span>
     </p>
   </div>
 );
@@ -128,7 +145,7 @@ export const ProductCard = ({ product, translate }) => (
       />
     </a>
     <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-    <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+    <h2 className="absolute bottom-4 left-4 right-4 opacity-0 group-hover/product:opacity-100 text-white text-xs xs:text-sm sm:text-base md:text-lg font-semibold drop-shadow break-words">
       {product.title}
     </h2>
   </motion.div>

@@ -5,7 +5,7 @@ export default function Content() {
     <div className="w-screen py-16 bg-white">
       {/* Discount Banner */}
       <div className="flex justify-center mb-6">
-        <a href="tel:+18883444990">
+        <a href="tel:(307)-216-4424">
           <button
             className="px-8 py-4 rounded-2xl font-bold text-2xl md:text-4xl bg-white shadow-lg border-2 border-blue-300 flex items-center justify-center transition hover:scale-105"
             style={{ minWidth: "280px" }}

@@ -72,7 +72,7 @@ const webinars = [
 export function TracingBeamDemo2() {
 	const handleDial = (e) => {
 		e.preventDefault();
-		window.open("tel:+18883444990");
+		window.open("tel:(307)-216-4424");
 	};
 
 	return (
@@ -113,7 +113,7 @@ export function TracingBeamDemo2() {
 								))}
 							</ul>
 							<a
-								href="tel:+18883444990"
+								href="tel:(307)-216-4424"
 								onClick={handleDial}
 								className="inline-block mt-2 text-indigo-600 font-bold underline"
 							>
@@ -164,14 +164,14 @@ export function TracingBeamDemo2() {
 					</ul>
 					<div className="flex flex-wrap gap-4">
 						<a
-							href="tel:+18883444990"
+							href="tel:(307)-216-4424"
 							onClick={handleDial}
 							className="text-indigo-600 font-bold underline"
 						>
 							👉 View All Events
 						</a>
 						<a
-							href="tel:+18883444990"
+							href="tel:(307)-216-4424"
 							onClick={handleDial}
 							className="text-indigo-600 font-bold underline"
 						>

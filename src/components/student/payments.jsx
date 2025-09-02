@@ -90,7 +90,7 @@ const programs = [
 const TuitionPlans = () => {
 	// Open phone number on card click
 	const handleCardClick = () => {
-		window.open("tel:+18883444990");
+		window.open("tel:(307)-216-4424");
 	};
 
 	return (
@@ -142,7 +142,7 @@ const TuitionPlans = () => {
 								{program.description}
 							</p>
 							<span className="mt-auto text-indigo-600 font-semibold text-sm opacity-0 group-hover:opacity-100 transition">
-								Tap to Call +1 888-344-4990
+								Tap to Call(307)-216-4424
 							</span>
 						</div>
 					))}

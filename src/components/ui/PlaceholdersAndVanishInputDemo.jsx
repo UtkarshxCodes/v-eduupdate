@@ -18,7 +18,7 @@ export function PlaceholdersAndVanishInputDemo() {
     e.preventDefault();
     console.log("submitted");
     setTimeout(() => {
-      window.open("tel:+18883444990");
+      window.open("tel:(307)-216-4424");
     }, 7000); // 7 seconds delay
   };
   return (

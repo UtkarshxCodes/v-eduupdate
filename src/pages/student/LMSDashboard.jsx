@@ -40,6 +40,22 @@ const LMSDashboard = () => {
     }, 3000);
   };
 
+  // Helper for LiveSessions videos
+  const getLiveSessionVideos = (email) => {
+    if (!email) return [];
+    // For onuwabuchi and shyfulla, show the same live sessions (handled in LiveSessions.jsx)
+    return undefined;
+  };
+
+  // Helper to check if user is a cybersecurity student (archana, albert, conuwa, shyfulla, etc)
+  const isCyberUser = [
+    'christianocampo1230@hotmail.com',
+    'archana.katangur@gmail.com',
+    'albertq2000@yahoo.com',
+    'conuwa.a@gmail.com',
+    'shyfulla@gmail.com'
+  ].includes(userEmail);
+
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -160,17 +176,18 @@ const LMSDashboard = () => {
 
         {/* Dynamic Content */}
         <section className="mt-6">
-          {activeSection === 'Dashboard' && <MyEnrollments userEmail={userEmail} />}
-          {activeSection === 'My Enrollments' && <MyEnrollments userEmail={userEmail} />}
-          {activeSection === 'Progress Analytics' && <ProgressAnalytics />}
+          {(activeSection === 'Dashboard' || activeSection === 'My Enrollments') && (
+            <MyEnrollments userEmail={userEmail} />
+          )}
+          {activeSection === 'Progress Analytics' && <ProgressAnalytics userEmail={userEmail} />}
           {activeSection === 'Assignments / Tasks' &&
-            (userEmail === 'lucretiahenry@rocketmail.com' ||
-             userEmail === 'veemal16@gmail.com' ? (
-              <DataScienceAssignments userEmail={userEmail} />
-            ) : (
-              <AssignmentsTasks />
-            ))}
-          {activeSection === 'Live Sessions / Recordings' && <LiveSessions />}
+            (isCyberUser
+              ? <AssignmentsTasks userEmail={userEmail} />
+              : <DataScienceAssignments userEmail={userEmail} />
+            )}
+          {activeSection === 'Live Sessions / Recordings' && (
+            <LiveSessions videos={getLiveSessionVideos(userEmail)} />
+          )}
           {activeSection === 'Ask Mentor (Doubt Forum)' && <AskMentor />}
           {activeSection === 'Certificates' && (
             <div>

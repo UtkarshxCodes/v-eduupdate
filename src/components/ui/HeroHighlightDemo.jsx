@@ -24,13 +24,13 @@ export function HeroHighlightDemo() {
     <HeroHighlight>
       <div className="flex flex-col items-center gap-6">
         {/* Top row: 5 logos */}
-        <div className="flex flex-row items-center justify-center gap-20 mb-4">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-10 md:gap-20 mb-4 w-full">
           {topLogos.map((logo, i) => (
             <img
               key={i}
               src={logo}
               alt={`logo-top-${i}`}
-              className="object-contain w-16 h-16"
+              className="object-contain w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16"
             />
           ))}
         </div>
@@ -57,13 +57,13 @@ export function HeroHighlightDemo() {
           </Highlight>
         </motion.h1>
         {/* Bottom row: 4 logos */}
-        <div className="flex flex-row items-center justify-center gap-20 mt-4">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-10 md:gap-20 mt-4 w-full">
           {bottomLogos.map((logo, i) => (
             <img
               key={i}
               src={logo}
               alt={`logo-bottom-${i}`}
-              className="object-contain w-16 h-16"
+              className="object-contain w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16"
             />
           ))}
         </div>

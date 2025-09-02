@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-function CountdownTimer({ targetDate }) {
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+function CountdownTimer({ initialTargetDate, loopDays = 4 }) {
+  const [targetDate, setTargetDate] = useState(initialTargetDate);
 
   function getTimeLeft() {
     const now = new Date();
@@ -10,16 +10,25 @@ function CountdownTimer({ targetDate }) {
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
-    return { days, hours, minutes, seconds };
+    return { days, hours, minutes, seconds, diff };
   }
+
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTimeLeft());
+      const tl = getTimeLeft();
+      setTimeLeft(tl);
+      if (tl.diff === 0) {
+        // Restart timer for another loopDays
+        const newTarget = new Date();
+        newTarget.setDate(newTarget.getDate() + loopDays);
+        setTargetDate(newTarget);
+      }
     }, 1000);
     return () => clearInterval(timer);
     // eslint-disable-next-line
-  }, []);
+  }, [targetDate, loopDays]);
 
   return (
     <div className="flex gap-4 justify-center md:justify-start mb-4">
@@ -43,7 +52,9 @@ function CountdownTimer({ targetDate }) {
   );
 }
 
-const targetDate = new Date("2025-08-31T23:59:59");
+// Usage example:
+const initialTargetDate = new Date();
+initialTargetDate.setDate(initialTargetDate.getDate() + 4);
 
 const GuaranteeForm = () => {
   const [form, setForm] = useState({
@@ -63,7 +74,7 @@ const GuaranteeForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    window.location.href = "tel:+18883444990";
+    window.location.href = "tel:(307)-216-4424";
   };
 
   return (
@@ -74,7 +85,7 @@ const GuaranteeForm = () => {
           <h2 className="text-2xl md:text-4xl font-bold text-[#142d4f] mb-4">
 🎉 Limited Time Offer      - <span className="bg-gradient-to-r from-sky-300 via-blue-500 to-blue-900 bg-clip-text text-transparent"> 35% OFF</span> V-edu bootcamp
           </h2>
-          <CountdownTimer targetDate={targetDate} />
+          <CountdownTimer initialTargetDate={initialTargetDate} loopDays={4} />
           <ul className="mb-8 space-y-2">
             <li className="flex items-center gap-2 text-lg text-[#142d4f]">
               <span className="text-green-600 font-bold">✔</span> Job Guarantee – Land a tech job in 10 months.

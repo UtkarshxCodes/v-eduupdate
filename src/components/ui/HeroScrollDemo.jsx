@@ -18,7 +18,7 @@ export function HeroScrollDemo() {
         }
       >
         <img
-          src="/hero-scroll.jpg"
+          src="https://static.vecteezy.com/system/resources/previews/005/482/431/original/illustration-graphic-cartoon-character-of-online-education-vector.jpg"
           alt="hero"
           height={720}
           width={1400}

@@ -65,7 +65,7 @@ const ReturnPolicyPage = () => {
         </a>
         <br />📞 Phone:{" "}
         <a
-          href="tel:+18883444990"
+          href="tel:(307)-216-4424"
           className="text-blue-600 hover:underline"
         >
           +1 (888) 344-4990

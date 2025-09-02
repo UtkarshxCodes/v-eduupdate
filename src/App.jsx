@@ -12,7 +12,6 @@ import MyEnrollments from './pages/student/MyEnrollments'
 import Loading from './components/student/Loading'
 import AboutUs from './components/student/Aboutus';
 import ContactUs from './components/student/ContactUs';
-import JobsList from './pages/student/JobsList';
 import CourseRegistration from './components/student/CourseRegistration';
 import LMSLoginPage from './pages/student/LMSLoginPage';
 import LMSDashboard from './pages/student/LMSDashboard';
@@ -78,14 +77,6 @@ const App = () => {
         <Route path="/loading/:path" element={<Loading />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/jobs" element={
-          <JobsList
-            showRegistration={showRegistration}
-            setShowRegistration={setShowRegistration}
-            formData={formData}
-            setFormData={setFormData}
-          />
-        } />
         <Route path="/register" element={<CourseRegistration />} />
         <Route path="/lms-login" element={<LMSLoginPage />} />
         <Route path="/lms-dashboard" element={<LMSDashboard />} />
@@ -110,12 +101,7 @@ const App = () => {
         <Route path="/resources/trends" element={<Trends />} />
 
       </Routes>
-      <CourseRegistration
-        isOpen={showRegistration}
-        setIsOpen={setShowRegistration}
-        formData={formData}
-        setFormData={setFormData}
-      />
+     
       <EnrollNowModal isOpen={showEnrollModal} onClose={() => setShowEnrollModal(false)} />
     </div>
   )

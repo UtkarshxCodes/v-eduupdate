@@ -185,7 +185,7 @@ const ContactUs = () => (
           Cheyenne, WY 82001
         </div>
         <div className="contact-info">
-          <strong>Phone:</strong> +1 888-344-4990<br />
+          <strong>Phone:</strong>(307)-216-4424<br />
           <strong>Email:</strong> <a href="mailto:support@v-edu.us">support@v-edu.us</a>
         </div>
       </div>

@@ -125,7 +125,7 @@ const guides = [
 export function TracingBeamDemo3() {
 		const handleDial = (e) => {
 			e.preventDefault();
-			window.open("tel:+18883444990");
+			window.open("tel:(307)-216-4424");
 		};
 
 	return (
@@ -160,7 +160,7 @@ export function TracingBeamDemo3() {
 							{item.summary}
 						</div>
 						<a
-							href="tel:+18883444990"
+							href="tel:(307)-216-4424"
 							onClick={handleDial}
 							className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2 rounded-lg shadow transition"
 						>

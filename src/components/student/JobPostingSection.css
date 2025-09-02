@@ -41,12 +41,20 @@
   border: 1.5px solid #e5e7eb;
   background: #fff;
   box-shadow: 0 4px 18px rgba(80, 120, 200, 0.07);
+  border-left: 6px solid #2563eb;
+  background: linear-gradient(135deg, #f8fafc 70%, #e0e7ff 100%);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 .job__card:hover {
   background: #232946;
   border-color: #232946;
   box-shadow: 0 8px 32px rgba(35, 41, 70, 0.18);
+  border-color: #059669;
+  box-shadow: 0 8px 32px rgba(35, 41, 70, 0.18), 0 0 0 2px #05966933;
+  background: linear-gradient(135deg, #e0f2fe 70%, #bbf7d0 100%);
 }
 
 .job__card__header {
@@ -198,5 +206,8 @@
 @media (max-width: 700px) {
   .job__grid {
     grid-template-columns: 1fr;
+  }
+  .job__card {
+    margin-bottom: 1.5rem;
   }
 }

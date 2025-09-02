@@ -47,7 +47,7 @@ export function TimelineDemo() {
                   – World-class bootcamps starting at
                   <br />
                   <span className="text-green-600 font-bold text-lg md:text-3xl align-middle mt-2 inline-block">
-                    just $X/month
+                    just $449/month
                   </span>
                   .
                 </span>

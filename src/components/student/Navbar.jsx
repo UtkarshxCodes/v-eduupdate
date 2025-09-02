@@ -19,8 +19,10 @@ const Navbar = ({ jobsRef }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
+    // Only run scroll effect on desktop (lg and up)
+    if (window.innerWidth < 1024) return;
     const handleScroll = () => {
-      if (mobileMenuOpen) return; // Prevent scroll effect when menu is open
+      if (mobileMenuOpen) return;
       setAtTop(window.scrollY < 10);
 
       if (window.scrollY < window.innerHeight / 2) {
@@ -45,11 +47,10 @@ const Navbar = ({ jobsRef }) => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);
-    setMobileMenuOpen(false); // for mobile menu
+    setMobileMenuOpen(false);
   };
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  const handleCoursesClick = () => navigate('/course-list');
 
   // Dropdown data for mobile
   const dropdowns = [
@@ -74,19 +75,29 @@ const Navbar = ({ jobsRef }) => {
         { to: "/job-openings", label: "Recent Job Openings" },
       ],
     },
+    {
+      label: "Resources",
+      items: [
+        { to: "/resources/articles", label: "Articles & Insights" },
+        { to: "/resources/webinars", label: "Webinars & Workshops" },
+        { to: "/resources/guides", label: "Guides & Playbooks" },
+        { to: "/resources/success", label: "Success Stories" },
+        { to: "/resources/trends", label: "Industry Trends" },
+      ],
+    },
   ];
 
   return (
     <>
-      {/* Desktop Navbar */}
+      {/* Desktop Navbar (lg and up): original behavior */}
       <nav
         className={`
-          fixed top-4 left-1/2 transform -translate-x-1/2 z-50
+          hidden lg:flex
+          fixed top-4 left-1/2 -translate-x-1/2 w-[98vw] max-w-7xl
+          bg-white shadow-lg py-1 rounded-full items-center border border-gray-200
           transition-all duration-700
           ${showNavbar ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-16'}
-          w-[98vw] max-w-7xl bg-white shadow-lg py-1
-          rounded-full flex items-center
-          border border-gray-200
+          z-50
         `}
         style={{
           boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
@@ -95,10 +106,7 @@ const Navbar = ({ jobsRef }) => {
         }}
       >
         {/* Logo - left */}
-        <div
-          className="flex-shrink-0 flex items-center ml-6"
-          style={{ flexBasis: '160px' }}
-        >
+        <div className="flex-shrink-0 flex items-center ml-6" style={{ flexBasis: '160px' }}>
           <img
             onClick={() => {
               navigate('/');
@@ -108,16 +116,15 @@ const Navbar = ({ jobsRef }) => {
             alt="Logo"
             className="cursor-pointer transition-all duration-700"
             style={{
-              width: '70px',
+              width: '84px', // was 70px, now a bit bigger
               height: 'auto',
               objectFit: 'contain',
               marginRight: '8px',
             }}
           />
         </div>
-
-        {/* Navigation Links - center (hidden on mobile) */}
-        <div className="flex-1 flex justify-center items-center gap-6 font-sans text-base font-medium relative max-md:hidden">
+        {/* Navigation Links - center */}
+        <div className="flex-1 flex justify-center items-center gap-6 font-sans text-base font-medium relative">
           {/* Careers */}
           <div className="group relative">
             <button className="nav-link text-black relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 group-hover:after:w-full">
@@ -125,7 +132,6 @@ const Navbar = ({ jobsRef }) => {
             </button>
             <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 absolute top-full mt-4 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-xl p-4 min-w-[260px] border border-gray-100 z-50">
               <div className="flex flex-col gap-2">
-                {/* Use button for navigation */}
                 <button onClick={() => handleNavClick("/careers/cyber")} className="dropdown-item text-black">Cyber Security & Ethical Hack</button>
                 <button onClick={() => handleNavClick("/careers/data")} className="dropdown-item text-black">Data Science & AI</button>
                 <button onClick={() => handleNavClick("/careers/cloud")} className="dropdown-item text-black">Cloud Computing & DevOps</button>
@@ -173,11 +179,10 @@ const Navbar = ({ jobsRef }) => {
             V-EDU Times
           </Link>
         </div>
-
-        {/* Right section - buttons (hidden on mobile) */}
-        <div className="flex items-center gap-2 mr-6 max-md:hidden" style={{ flexBasis: '180px' }}>
+        {/* Right section - buttons */}
+        <div className="flex items-center gap-2 mr-6" style={{ flexBasis: '180px' }}>
           <a
-            href="tel:+18883444990"
+            href="tel:(307)-216-4424"
             className="bg-blue-600 text-white px-4 py-1 font-bold shadow hover:bg-blue-700 transition rounded-full"
             style={{
               fontSize: '15px',
@@ -185,7 +190,7 @@ const Navbar = ({ jobsRef }) => {
               fontWeight: 600,
             }}
           >
-            Call Us
+            Call
           </a>
           <Link
             to="/lms-login"
@@ -204,11 +209,53 @@ const Navbar = ({ jobsRef }) => {
               <UserButton />
             </>
           )}
+          {/* Register button - always visible */}
+          <Link
+            to="/register"
+            className="bg-white text-blue-700 border border-blue-600 px-4 py-1 font-bold shadow hover:bg-blue-50 transition rounded-full ml-2"
+            style={{
+              fontSize: '15px',
+              fontWeight: 600,
+            }}
+          >
+            Register
+          </Link>
         </div>
+      </nav>
 
-        {/* Hamburger for mobile */}
+      {/* Mobile & Tablet Navbar (below lg): fixed, only logo and menu */}
+      <nav
+        className={`
+          flex lg:hidden
+          fixed top-0 left-0 w-full z-50
+          bg-white shadow-lg py-1 border-b border-gray-200
+          items-center justify-between
+          px-4
+        `}
+        style={{
+          minHeight: '54px',
+        }}
+      >
+        {/* Logo - always left, fixed */}
+        <div className="flex-shrink-0 flex items-center" style={{ flexBasis: '120px' }}>
+          <img
+            onClick={() => {
+              navigate('/');
+              scrollToTop();
+            }}
+            src={assets.logo}
+            alt="Logo"
+            className="cursor-pointer"
+            style={{
+              width: '68px', // was 56px, now a bit bigger
+              height: 'auto',
+              objectFit: 'contain',
+            }}
+          />
+        </div>
+        {/* Hamburger for mobile/tablet - always right, fixed */}
         <button
-          className="md:hidden ml-auto mr-4 p-2 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center"
+          className="ml-auto p-2 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center"
           onClick={() => setMobileMenuOpen(true)}
           aria-label="Open menu"
         >
@@ -218,9 +265,9 @@ const Navbar = ({ jobsRef }) => {
         </button>
       </nav>
 
-      {/* Mobile Menu - Fullscreen, fixed, closes only on cross or link click */}
+      {/* Mobile/Tablet Menu - Fullscreen, fixed */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[999] bg-black bg-opacity-40 md:hidden">
+        <div className="fixed inset-0 z-[999] bg-black bg-opacity-40 lg:hidden">
           <div className="fixed inset-0 bg-white h-full w-full shadow-2xl flex flex-col pt-8 pb-6 px-6">
             {/* Close button */}
             <button
@@ -259,13 +306,22 @@ const Navbar = ({ jobsRef }) => {
             ))}
             {/* Call Us button */}
             <a
-              href="tel:+18883444990"
+              href="tel:(307)-216-4424"
               className="w-full mt-6 mb-2 px-4 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition text-center block"
               style={{ fontSize: '17px' }}
               onClick={() => setMobileMenuOpen(false)}
             >
               Call Us
             </a>
+            {/* Register button - mobile */}
+            <Link
+              to="/register"
+              className="w-full mb-2 px-4 py-3 bg-white text-blue-700 font-bold rounded-lg shadow border border-blue-600 hover:bg-blue-50 transition text-center block"
+              style={{ fontSize: '17px' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Register
+            </Link>
           </div>
         </div>
       )}
