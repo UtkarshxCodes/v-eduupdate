@@ -78,8 +78,8 @@ const programs = [
 		name: "One-on-One Tuitions",
 		type: "Personalized",
 		highlight: "The best personalized learning option",
-		upfront: "$3,999",
-		oldUpfront: "$4,999",
+		upfront: "$4,999",
+		oldUpfront: "$5,999",
 		savings: "💰 Save up to $1,000",
 		description:
 			"Experience one-on-one classes with expert mentors tailored to your pace and goals. Get 100% personalized attention and guidance throughout your journey. No risk—you can withdraw with a 100% refund in the first 2 weeks.",

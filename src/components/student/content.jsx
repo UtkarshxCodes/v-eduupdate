@@ -46,10 +46,10 @@ export default function Content() {
           <p className="text-base font-semibold mb-2 text-pink-700">Learn now, pay with flexibility</p>
           <div className="flex items-baseline gap-2 mb-2">
             <span className="text-lg text-neutral-700">Starting at </span>
-            <span className="text-3xl font-bold text-[#142d4f]">$199</span>
+            <span className="text-3xl font-bold text-[#142d4f]">$449</span>
             <span className="text-lg text-neutral-700">per month</span>
           </div>
-          <span className="text-gray-700 mb-2">$2999 in total</span>
+          <span className="text-gray-700 mb-2">$2695 in total</span>
           <p className="text-neutral-700 mb-2">
            with AfterPay and other flexible payment partners! <span className="text-red-600 font-semibold">Credit check req’d.</span>
           </p>
@@ -60,8 +60,8 @@ export default function Content() {
           <h2 className="text-2xl font-bold mb-2 text-[#142d4f]">One-on-One Tuitions</h2>
           <p className="text-base font-semibold mb-2 text-violet-700">The best personalized learning option</p>
           <div className="flex items-baseline gap-3 mb-2">
-            <span className="text-3xl font-bold text-[#142d4f]">$3,999</span>
-            <span className="line-through text-gray-400 text-xl">$4,999</span>
+            <span className="text-3xl font-bold text-[#142d4f]">$4,999</span>
+            <span className="line-through text-gray-400 text-xl">$5,999</span>
           </div>
           <span className="text-green-600 font-semibold mb-2">💰 Save up to $1,000</span>
           <p className="text-neutral-700 mb-4">
