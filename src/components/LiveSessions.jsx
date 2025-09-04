@@ -22,7 +22,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/BsPm3v8xtWo", title: "Data Science" },
     { src: "https://www.youtube.com/embed/qMS3bTQjyjA", title: "Data Science" },
     { src: "https://www.youtube.com/embed/kKf4aQ27yZI", title: "Data Science" },
-    
+    { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" }, 
+    { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" }, 
   ],
   'veemal16@gmail.com': [
     { src: "https://www.youtube.com/embed/HDoDuVMqyTY", title: "Data Science" },
@@ -42,6 +43,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/BsPm3v8xtWo", title: "Data Science" },
     { src: "https://www.youtube.com/embed/qMS3bTQjyjA", title: "Data Science" },
     { src: "https://www.youtube.com/embed/kKf4aQ27yZI", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" }, 
+    { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" }, 
      
   ],
   'archana.katangur@gmail.com': [
@@ -78,7 +81,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/BsPm3v8xtWo", title: "Data Science" },
     { src: "https://www.youtube.com/embed/qMS3bTQjyjA", title: "Data Science" },
     { src: "https://www.youtube.com/embed/kKf4aQ27yZI", title: "Data Science" },
-     
+    { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" },   
   ],
   'conuwa.a@gmail.com': [
     
@@ -94,6 +98,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/b7B60Wv_mK4", title: "Data Science" },
     { src: "https://www.youtube.com/embed/BsPm3v8xtWo", title: "Data Science" },
     { src: "https://www.youtube.com/embed/qMS3bTQjyjA", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" },  
      
   ],
   'albertq2000@yahoo.com': [
@@ -108,11 +114,15 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/7JrHv3FplW0", title: "V-edu" },
     { src: "https://www.youtube.com/embed/B0RC6f9hUvU", title: "V-edu" },
     { src: "https://www.youtube.com/embed/svwCr7UM8cU", title: "V-edu" },
+    { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" }, 
+    { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" }, 
   ],
   'rayhanramadhany@gmail.com': [
    { src: "https://www.youtube.com/embed/7JrHv3FplW0", title: "V-edu" },
    { src: "https://www.youtube.com/embed/B0RC6f9hUvU", title: "V-edu" },
    { src: "https://www.youtube.com/embed/svwCr7UM8cU", title: "V-edu" },
+   { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" }, 
+   { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" }, 
   ],
 };
 

@@ -124,9 +124,9 @@ const CourseRegistration = () => {
                     src="/certificate1.png"
                     alt="Certificate 1"
                     className="rounded-xl shadow-lg h-40 w-auto max-h-40 object-contain border-2 border-blue-200"
-                    style={{ aspectRatio: "3/4" }}
+                    style={{ aspectRatio: "4/3" }}
                   />
-                  <span className="text-xs text-gray-600 mt-1">Certificate 1</span>
+                  <span className="text-xs text-gray-600 mt-1">Microsoft Certification</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <img
@@ -135,7 +135,7 @@ const CourseRegistration = () => {
                     className="rounded-xl shadow-lg w-40 h-auto max-w-[180px] object-contain border-2 border-blue-200"
                     style={{ aspectRatio: "4/3" }}
                   />
-                  <span className="text-xs text-gray-600 mt-1">Certificate 2</span>
+                  <span className="text-xs text-gray-600 mt-1">V-EDU Certification</span>
                 </div>
               </div>
             </div>

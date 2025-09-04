@@ -8,6 +8,8 @@ import AssignmentsTasks from '../../components/AssignmentsTasks';
 import DataScienceAssignments from '../../components/DataScienceAssignments';
 import AskMentor from '../../components/AskMentor';
 
+const NAVBAR_HEIGHT = 64; // Adjust if your navbar height is different
+
 const LMSDashboard = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -59,14 +61,17 @@ const LMSDashboard = () => {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-blue-900 text-white flex flex-col fixed top-20 left-0 h-[calc(100%-5rem)]">
-        <div className="p-6 text-center border-b border-blue-700">
-          <h1 className="text-xl font-bold">V-EDU.us</h1>
-          <p className="text-sm">Learning Management System</p>
-          <p className="text-sm mt-2">Welcome, {userName}!</p>
+      <aside
+        className="w-64 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white flex flex-col fixed left-0 shadow-xl border-r border-blue-900"
+        style={{ top: 80, height: 'calc(100vh - 72px)' }} // Adjust top as needed
+      >
+        <div className="p-6 text-center border-b border-blue-800 bg-blue-900 bg-opacity-90 rounded-t-xl shadow">
+          <h1 className="text-2xl font-extrabold tracking-wide mb-1">V-EDU.us</h1>
+          <p className="text-sm font-medium">Learning Management System</p>
+          <p className="text-sm mt-2 font-semibold">Welcome, {userName}!</p>
         </div>
         <nav className="flex-1 p-4 overflow-y-auto">
-          <ul className="space-y-4">
+          <ul className="space-y-2">
             <li
               className={`flex items-center gap-3 hover:bg-blue-700 p-2 rounded-md cursor-pointer ${
                 activeSection === 'Dashboard' ? 'bg-blue-700' : ''
@@ -142,29 +147,29 @@ const LMSDashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 ml-64 p-6">
+      <main className="flex-1 ml-64 p-8 pt-16">
         {/* Header */}
-        <header className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md relative">
+        <header className="flex items-center justify-between bg-white p-6 rounded-xl shadow-md relative mb-4">
           <div>
-            <h2 className="text-xl font-bold">Welcome back, {userName} 👋</h2>
-            <p className="text-sm text-gray-500">Your learning journey continues!</p>
+            <h2 className="text-2xl font-bold">Welcome back, {userName} 👋</h2>
+            <p className="text-base text-gray-500">Your learning journey continues!</p>
           </div>
           <div className="flex items-center gap-4">
             <div className="relative">
               <FaBell
-                size={20}
-                className="text-gray-700 cursor-pointer"
+                size={22}
+                className="text-blue-700 cursor-pointer"
                 onClick={handleNotificationClick}
               />
               <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-1">3</span>
             </div>
-            <FaUserCircle size={30} className="text-gray-700 cursor-pointer" />
+            <FaUserCircle size={34} className="text-blue-700 cursor-pointer" />
           </div>
 
           {/* Notification Popup */}
           {showNotificationPopup && (
-            <div className="absolute top-12 right-0 bg-white shadow-lg rounded-lg p-4 w-64 z-50">
-              <h4 className="text-sm font-bold mb-2">🔔 Notifications</h4>
+            <div className="absolute top-14 right-0 bg-white shadow-lg rounded-lg p-4 w-72 z-50 border border-blue-100">
+              <h4 className="text-base font-bold mb-2">🔔 Notifications</h4>
               <ul className="text-sm text-gray-700 space-y-2">
                 <li>Welcome to V-EDU LMS, {userName}! Your personalized learning journey begins here.</li>
                 <li>Stay tuned! One of our expert instructors will shortly assist you.</li>
@@ -175,7 +180,7 @@ const LMSDashboard = () => {
         </header>
 
         {/* Dynamic Content */}
-        <section className="mt-6">
+        <section className="mt-8">
           {(activeSection === 'Dashboard' || activeSection === 'My Enrollments') && (
             <MyEnrollments userEmail={userEmail} />
           )}

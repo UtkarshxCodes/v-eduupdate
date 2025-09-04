@@ -13,10 +13,6 @@ import google_logo from './google.png'; // Added Google logo
 import amazon_logo from './amazon.png'; // Added Amazon logo
 import deloitte_logo from './deloitte.png'; // Added Deloitte logo
 import ibm_logo from './ibm.png'; // Added IBM logo
-import course_1_thumbnail from './course_1.png';
-import course_2_thumbnail from './course_2.png';
-import course_3_thumbnail from './course_3.png';
-import course_4_thumbnail from './course_4.png';
 import fav from './fav.png';
 import star from './rating_star.svg';
 import star_blank from './star_dull_icon.svg';
@@ -42,31 +38,20 @@ import dropdown_icon from './dropdown_icon.svg';
 import patients_icon from './patients_icon.svg';
 import play_icon from './play_icon.svg';
 import blue_tick_icon from './blue_tick_icon.svg';
-import course_4 from './course_4.png';
 import profile_img from './profile_img.png';
 import profile_img2 from './profile_img2.png';
 import profile_img3 from './profile_img3.png';
 import lesson_icon from './lesson_icon.svg';
 import backgroundImage from './backgroundImage.png'; 
-import videolms from './videolms.mp4';
 import map from './map.png';
-import details1 from './details1.png';
 import details2 from './details2.png';
-import details3 from './details3.png';
-import details4 from './details4.png';
-import details5 from './details5.png';
-import video1 from './video1.mp4'; 
 import counts from './counts.png'; 
-import carousal1 from './carousal1.png';
-import carousal2 from './carousal2.png';
-import carousal3 from './carousal3.png';
 import about1 from './about1.png';
 import about2 from './about2.png';
 import about3 from './about3.png';
 import about4 from './about4.png';
 import about5 from './about5.png';
 import about6 from './about6.png';
-import bgquiz from './bgquiz.png'; 
 import ravi from './ravi.png';
 import sophia from './sophia.png';
 import meera from './meera.png';
@@ -77,12 +62,7 @@ import carlos from './carlos.png';
 import priya from './priya.png';
 import aisha from './aisha.png';
 import michael from './Michael.png'; // Comment this if file is missing
-import Coursevid1 from './Coursevid1.mp4';
-import Coursevid2 from './Coursevid2.mp4';
-import Coursevid3 from './Coursevid3.mp4';
-import Coursevid4 from './Coursevid4.mp4';
-import Coursevid5 from './Coursevid5.mp4';
-import Coursevid6 from './Coursevid6.mp4';
+
 
 export const assets = {
     logo,
@@ -97,10 +77,6 @@ export const assets = {
     amazon_logo, // Added Amazon logo
     deloitte_logo, // Added Deloitte logo
     ibm_logo, // Added IBM logo
-    course_1_thumbnail,
-    course_2_thumbnail,
-    course_3_thumbnail,
-    course_4_thumbnail,
     fav,
     star,
     star_blank,
@@ -123,7 +99,6 @@ export const assets = {
     facebook_icon,
     instagram_icon,
     twitter_icon,
-    course_4,
     file_upload_icon,
     appointments_icon,
     earning_icon,
@@ -135,25 +110,15 @@ export const assets = {
     blue_tick_icon,
     lesson_icon,
     backgroundImage,
-    videolms,
     map,
-    details1,
     details2,
-    details3,
-    details4,
-    details5,
-    video1,
     counts,
-    carousal1,
-    carousal2,
-    carousal3,
     about1,
     about2,
     about3,
     about4,
     about5,
     about6,
-    bgquiz, // Add bgquiz.png
     ravi,
     sophia,
     meera,
@@ -164,12 +129,7 @@ export const assets = {
     priya,
     aisha,
     michael, // And this line too if missing
-    Coursevid1,
-    Coursevid2,
-    Coursevid3,
-    Coursevid4, // Added Coursevid4
-    Coursevid5, // Added Coursevid5
-    Coursevid6, // Added Coursevid6
+    // Added Coursevid6
 }
 
 export const dummyTestimonial = [

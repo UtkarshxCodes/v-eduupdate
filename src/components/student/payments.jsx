@@ -167,8 +167,7 @@ const TuitionPlans = () => {
 						<div>
 							<p className="font-semibold">3.</p>
 							<p>
-								If you don’t have a job after 300 days, we’ll refund 100% of your
-								tuition.
+								If your internship doesn’t transition into a full-time role, we’ll begin scheduling weekly interviews.
 							</p>
 						</div>
 					</div>
