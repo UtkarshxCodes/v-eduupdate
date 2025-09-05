@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 const MyEnrollments = ({ userEmail }) => {
   const [showCurriculum, setShowCurriculum] = useState(false);
 
+  // Add Simmons and Justin as Data Science users
+  const isSimmons = userEmail === 'phyllissimmo@yahoo.com';
+  const isJustin = userEmail === 'jprendergass@gmail.com';
+
   const isLucretia = userEmail === 'lucretiahenry@rocketmail.com';
   const isVeemal = userEmail === 'veemal16@gmail.com';
   const isRonesh = userEmail === 'singhronesh96@gmail.com';
@@ -32,6 +36,8 @@ const MyEnrollments = ({ userEmail }) => {
     enrollmentDate = 'July, 2025';
   } else if (isRocco) {
     enrollmentDate = 'July, 2025';
+  } else if (isSimmons || isJustin) {
+    enrollmentDate = 'September, 2025';
   } else if (isCyberUser) {
     enrollmentDate = 'June 15, 2025';
   } else if (isAndini) {
@@ -44,7 +50,7 @@ const MyEnrollments = ({ userEmail }) => {
     <div className="mt-6">
       <h3 className="text-lg font-bold mb-4">📚 My Enrollments</h3>
       <div className="bg-white p-6 rounded-lg shadow-md">
-        {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan) && !isCyberUser ? (
+        {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin) && !isCyberUser ? (
           <div className="border rounded-lg p-4 mb-6">
             <h4 className="text-xl font-bold mb-2">🎓 Data Science & AI</h4>
             <p className="text-sm text-gray-500 mb-2">Enrolled On: {enrollmentDate}</p>
@@ -90,7 +96,7 @@ const MyEnrollments = ({ userEmail }) => {
           <div className="border rounded-lg p-4">
             <h4 className="text-lg font-bold mb-4">📜 Curriculum Modules</h4>
             <ul className="space-y-4">
-              {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan) && !isCyberUser ? (
+              {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin) && !isCyberUser ? (
                 <>
                   <li className="flex items-center gap-3">
                     <span>📊</span>
