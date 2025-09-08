@@ -2,6 +2,7 @@ import React from "react";
 import { LampDemo } from "../ui/lamp";
 import { FollowingPointerDemo } from "../ui/Followingpointerdemo";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const programs = [
 	{
@@ -9,8 +10,8 @@ const programs = [
 		type: "Upfront Payment",
 		highlight: "The most affordable choice",
 		upfront: "$2,499",
-		oldUpfront: "$3,000",
-		savings: "💰 Save up to $500",
+		oldUpfront: "$4,000",
+		savings: "💰 Save up to $1,500",
 		description:
 			"Get access to all V-EDU courses at a special discounted upfront price. One-time payment—no hidden fees. Secure your future at the best price today!",
 	},
@@ -19,8 +20,8 @@ const programs = [
 		type: "Upfront Payment",
 		highlight: "The most affordable choice",
 		upfront: "$2,499",
-		oldUpfront: "$3,000",
-		savings: "💰 Save up to $500",
+		oldUpfront: "$4,000",
+		savings: "💰 Save up to $1,500",
 		description:
 			"Get access to all V-EDU courses at a special discounted upfront price. One-time payment—no hidden fees. Secure your future at the best price today!",
 	},
@@ -29,8 +30,8 @@ const programs = [
 		type: "Upfront Payment",
 		highlight: "The most affordable choice",
 		upfront: "$2,499",
-		oldUpfront: "$3,000",
-		savings: "💰 Save up to $500",
+		oldUpfront: "$4,000",
+		savings: "💰 Save up to $1,500",
 		description:
 			"Get access to all V-EDU courses at a special discounted upfront price. One-time payment—no hidden fees. Secure your future at the best price today!",
 	},
@@ -39,8 +40,8 @@ const programs = [
 		type: "Upfront Payment",
 		highlight: "The most affordable choice",
 		upfront: "$2,499",
-		oldUpfront: "$3,000",
-		savings: "💰 Save up to $500",
+		oldUpfront: "$4,000",
+		savings: "💰 Save up to $1,500",
 		description:
 			"Get access to all V-EDU courses at a special discounted upfront price. One-time payment—no hidden fees. Secure your future at the best price today!",
 	},
@@ -49,8 +50,8 @@ const programs = [
 		type: "Upfront Payment",
 		highlight: "The most affordable choice",
 		upfront: "$2,499",
-		oldUpfront: "$3,000",
-		savings: "💰 Save up to $500",
+		oldUpfront: "$4,000",
+		savings: "💰 Save up to $1,500",
 		description:
 			"Get access to all V-EDU courses at a special discounted upfront price. One-time payment—no hidden fees. Secure your future at the best price today!",
 	},
@@ -59,8 +60,8 @@ const programs = [
 		type: "Upfront Payment",
 		highlight: "The most affordable choice",
 		upfront: "$2,499",
-		oldUpfront: "$3,000",
-		savings: "💰 Save up to $500",
+		oldUpfront: "$4,000",
+		savings: "💰 Save up to $1,500",
 		description:
 			"Get access to all V-EDU courses at a special discounted upfront price. One-time payment—no hidden fees. Secure your future at the best price today!",
 	},
@@ -69,8 +70,8 @@ const programs = [
 		type: "AfterPay & Financing",
 		highlight: "Learn now, pay with flexibility",
 		upfront: "Start at $199",
-		oldUpfront: "$2,999 in total",
-		savings: "",
+		oldUpfront: "$299",
+		savings: "Save $100 untill batches full",
 		description:
 			"Join now at a minimal cost and spread the rest into easy installments. Focus on learning today, pay comfortably over time. Multiple plans available depending on your needs. With AfterPay and other flexible payment partners! Credit check req’d.",
 	},
@@ -79,8 +80,8 @@ const programs = [
 		type: "Personalized",
 		highlight: "The best personalized learning option",
 		upfront: "$4,999",
-		oldUpfront: "$5,999",
-		savings: "💰 Save up to $1,000",
+		oldUpfront: "$7,000",
+		savings: "💰 Save up to $2,000",
 		description:
 			"Experience one-on-one classes with expert mentors tailored to your pace and goals. Get 100% personalized attention and guidance throughout your journey. No risk—you can withdraw with a 100% refund in the first 2 weeks.",
 	},
@@ -88,9 +89,19 @@ const programs = [
 
 // TuitionPlans component
 const TuitionPlans = () => {
-	// Open phone number on card click
-	const handleCardClick = () => {
-		window.open("tel:(307)-216-4424");
+	const navigate = useNavigate();
+
+	// Handle card click based on program name/type
+	const handleCardClick = (program) => {
+		if (program.name === "One-on-One Tuitions") {
+			window.location.href = "/onetoone";
+		} else if (program.type === "Upfront Payment") {
+			window.location.href = "/payments-enroll";
+		} else if (program.name === "Register & AfterPay") {
+			navigate("/course-registration");
+		} else {
+			window.open("tel:(307)-216-4424");
+		}
 	};
 
 	return (
@@ -105,12 +116,12 @@ const TuitionPlans = () => {
 					{programs.map((program, idx) => (
 						<div
 							key={idx}
-							onClick={handleCardClick}
+							onClick={() => handleCardClick(program)}
 							className="cursor-pointer bg-white shadow-md rounded-2xl p-8 flex flex-col hover:shadow-xl transition min-h-[340px] border border-indigo-100 hover:border-indigo-400 group"
 							style={{ minWidth: 0 }}
 							tabIndex={0}
 							role="button"
-							aria-label={`Call for ${program.name}`}
+							aria-label={`Open payment for ${program.name}`}
 						>
 							<div className="w-full flex flex-col gap-1 mb-2">
 								<span className="text-xs font-semibold text-indigo-600 uppercase tracking-wide">
@@ -142,7 +153,11 @@ const TuitionPlans = () => {
 								{program.description}
 							</p>
 							<span className="mt-auto text-indigo-600 font-semibold text-sm opacity-0 group-hover:opacity-100 transition">
-								Tap to Call(307)-216-4424
+								{program.name === "One-on-One Tuitions"
+									? "Go to One-on-One Payment"
+									: program.type === "Upfront Payment"
+									? "Go to Upfront Payment"
+									: "Tap to Call(307)-216-4424"}
 							</span>
 						</div>
 					))}
@@ -156,17 +171,19 @@ const TuitionPlans = () => {
 					<div className="grid md:grid-cols-3 gap-6 text-left mt-6 text-sm">
 						<div>
 							<p className="font-semibold">1.</p>
-							<p>Graduate and complete our included career prep course.</p>
+							<p className="text-sm">
+								Graduate and complete our included career prep course.
+							</p>
 						</div>
 						<div>
 							<p className="font-semibold">2.</p>
-							<p>
+							<p className="text-sm">
 								Apply to relevant jobs and stay in touch with your career coach.
 							</p>
 						</div>
 						<div>
 							<p className="font-semibold">3.</p>
-							<p>
+							<p className="text-sm">
 								If your internship doesn’t transition into a full-time role, we’ll begin scheduling weekly interviews.
 							</p>
 						</div>

@@ -35,6 +35,7 @@ import Webinars from './components/student/webinars';
 import Guides from './components/student/guides';
 import Success from './components/student/success';
 import Trends from './components/student/trends';
+import OnetoOnePage from './pages/student/OnetoOnePage';
 const App = () => {
   const [showRegistration, setShowRegistration] = useState(false);
   const [formData, setFormData] = useState({
@@ -99,6 +100,8 @@ const App = () => {
         <Route path="/resources/guides" element={<Guides />} />
         <Route path="/resources/success" element={<Success />} />
         <Route path="/resources/trends" element={<Trends />} />
+        <Route path="/onetoone" element={<OnetoOnePage />} />
+        <Route path="/course-registration" element={<CourseRegistration />} />
 
       </Routes>
      

@@ -32,9 +32,9 @@ export default function Content() {
           <p className="text-base font-semibold mb-2 text-blue-700">The most affordable choice</p>
           <div className="flex items-baseline gap-3 mb-2">
             <span className="text-3xl font-bold text-[#142d4f]">$2,499</span>
-            <span className="line-through text-gray-400 text-xl">$3,000</span>
+            <span className="line-through text-gray-400 text-xl">$4,000</span>
           </div>
-          <span className="text-green-600 font-semibold mb-2">💰 Save up to $500</span>
+          <span className="text-green-600 font-semibold mb-2">💰 Save up to $1,500</span>
           <p className="text-neutral-700 mb-4">
             Get access to all V-EDU courses at a special discounted upfront price. One-time payment—no hidden fees. Secure your future at the best price today!
           </p>
@@ -56,18 +56,20 @@ export default function Content() {
           <span className="text-neutral-500 text-sm">Join now at a minimal cost and spread the rest into easy installments.<br /> Focus on learning today, pay comfortably over time. Multiple plans available depending on your needs.</span>
         </div>
         {/* One-on-One Tuitions Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-start border-t-4 border-violet-500">
-          <h2 className="text-2xl font-bold mb-2 text-[#142d4f]">One-on-One Tuitions</h2>
-          <p className="text-base font-semibold mb-2 text-violet-700">The best personalized learning option</p>
-          <div className="flex items-baseline gap-3 mb-2">
-            <span className="text-3xl font-bold text-[#142d4f]">$4,999</span>
-            <span className="line-through text-gray-400 text-xl">$5,999</span>
+        <a href="/onetoone" style={{ textDecoration: "none" }}>
+          <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-start border-t-4 border-violet-500 cursor-pointer hover:scale-105 transition">
+            <h2 className="text-2xl font-bold mb-2 text-[#142d4f]">One-on-One Tuitions</h2>
+            <p className="text-base font-semibold mb-2 text-violet-700">The best personalized learning option</p>
+            <div className="flex items-baseline gap-3 mb-2">
+              <span className="text-3xl font-bold text-[#142d4f]">$4,999</span>
+              <span className="line-through text-gray-400 text-xl">7,000</span>
+            </div>
+            <span className="text-green-600 font-semibold mb-2">💰 Save up to $2,000</span>
+            <p className="text-neutral-700 mb-4">
+              Experience one-on-one classes with expert mentors tailored to your pace and goals. Get 100% personalized attention and guidance throughout your journey. No risk—you can withdraw with a 100% refund in the first 2 weeks.
+            </p>
           </div>
-          <span className="text-green-600 font-semibold mb-2">💰 Save up to $1,000</span>
-          <p className="text-neutral-700 mb-4">
-            Experience one-on-one classes with expert mentors tailored to your pace and goals. Get 100% personalized attention and guidance throughout your journey. No risk—you can withdraw with a 100% refund in the first 2 weeks.
-          </p>
-        </div>
+        </a>
       </div>
     </div>
   );
