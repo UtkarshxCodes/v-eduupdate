@@ -146,6 +146,10 @@ const userVideosMap = {
   'jprendergass@gmail.com': [
     
   ],
+  'm2v3k4@gmail.com': [
+    // Add your embedded links here for Md vakil khan
+    // Example: { src: "YOUR_YOUTUBE_OR_VIDEO_LINK", title: "Data Science Session" },
+  ],
 };
 
 const defaultVideos = [
