@@ -60,7 +60,7 @@ const CourseRegistration = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100 flex justify-center items-center py-8 px-2">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100 flex justify-center items-center py-0 px-2">
         <div className="bg-white rounded-3xl shadow-2xl p-4 sm:p-8 w-full max-w-4xl md:max-w-5xl xl:max-w-6xl relative flex flex-col gap-8">
           {/* Main Heading */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-blue-800 mb-2">
@@ -123,8 +123,13 @@ const CourseRegistration = () => {
                   <img
                     src="/certificate1.png"
                     alt="Certificate 1"
-                    className="rounded-xl shadow-lg h-40 w-auto max-h-40 object-contain border-2 border-blue-200"
-                    style={{ aspectRatio: "4/3" }}
+                    className="rounded-xl shadow-lg border-2 border-blue-200"
+                    style={{
+                      width: "170px",
+                      height: "130px",
+                      objectFit: "contain",
+                      display: "block"
+                    }}
                   />
                   <span className="text-xs text-gray-600 mt-1">Microsoft Certification</span>
                 </div>
@@ -132,8 +137,13 @@ const CourseRegistration = () => {
                   <img
                     src="/certificate2.png"
                     alt="Certificate 2"
-                    className="rounded-xl shadow-lg w-40 h-auto max-w-[180px] object-contain border-2 border-blue-200"
-                    style={{ aspectRatio: "4/3" }}
+                    className="rounded-xl shadow-lg border-2 border-blue-200"
+                    style={{
+                      width: "170px",
+                      height: "130px",
+                      objectFit: "contain",
+                      display: "block"
+                    }}
                   />
                   <span className="text-xs text-gray-600 mt-1">V-EDU Certification</span>
                 </div>

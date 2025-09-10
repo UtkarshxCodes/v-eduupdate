@@ -24,7 +24,7 @@ export function ThreeDCardDemo() {
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
             <img
-              src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+              src="https://thumbs.dreamstime.com/b/cyber-security-businessman-black-background-119577360.jpg"
               height="1000"
               width="1000"
               className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
