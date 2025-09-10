@@ -71,6 +71,7 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/f22IG12YbFU", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/HykRfCaMSWw", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
+    { src: "https://www.youtube.com/embed/-S2or8JJTUY", title: "V-EDU" },
   ],
   'roccosegreti@yahoo.com': [
     { src: "https://www.youtube.com/embed/qIAQeodpgw4", title: "Rocco Cybersecurity Session" },
@@ -144,7 +145,7 @@ const userVideosMap = {
       { src: "https://www.youtube.com/embed/_NUqqQ33fQQ", title: "Data Science" }, 
   ],
   'jprendergass@gmail.com': [
-    
+    { src: "https://www.youtube.com/embed/Mv91w39w66c", title: "Data Science" },
   ],
   'm2v3k4@gmail.com': [
     // Add your embedded links here for Md vakil khan
