@@ -128,7 +128,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/svwCr7UM8cU", title: "V-edu" },
     { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" }, 
     { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" },
-   { src: "https://www.youtube.com/embed/90ObajdIPhc", title: "Data Science" }, 
+   { src: "https://www.youtube.com/embed/90ObajdIPhc", title: "Data Science" },
+   { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },  
   ],
   'rayhanramadhany@gmail.com': [
    { src: "https://www.youtube.com/embed/7JrHv3FplW0", title: "V-edu" },
@@ -139,16 +140,19 @@ const userVideosMap = {
    { src: "https://www.youtube.com/embed/90ObajdIPhc", title: "Data Science" },
    { src: "https://www.youtube.com/embed/eKHgFZrtetY", title: "Data Science" },
    { src: "https://www.youtube.com/embed/nWA-8QLnPVs", title: "Data Science" },
+   
   ],
   'phyllissimmo@yahoo.com': [
       { src: "https://www.youtube.com/embed/TDWiqjdynhQ", title: "Data Science" }, 
       { src: "https://www.youtube.com/embed/_NUqqQ33fQQ", title: "Data Science" }, 
+     { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },  
   ],
   'jprendergass@gmail.com': [
     { src: "https://www.youtube.com/embed/Mv91w39w66c", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },  
   ],
   'm2v3k4@gmail.com': [
-    // Add your embedded links here for Md vakil khan
+    { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },
     // Example: { src: "YOUR_YOUTUBE_OR_VIDEO_LINK", title: "Data Science Session" },
   ],
 };
