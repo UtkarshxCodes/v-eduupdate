@@ -43,6 +43,7 @@ import profile_img2 from './profile_img2.png';
 import profile_img3 from './profile_img3.png';
 import lesson_icon from './lesson_icon.svg';
 import backgroundImage from './backgroundImage.png'; 
+import mobileBackgroundImage from './mobileBackgroundImage.png'; // <-- Add your mobile image here
 import map from './map.png';
 import details2 from './details2.png';
 import counts from './counts.png'; 
@@ -110,6 +111,7 @@ export const assets = {
     blue_tick_icon,
     lesson_icon,
     backgroundImage,
+    mobileBackgroundImage, // <-- Add your mobile image here
     map,
     details2,
     counts,

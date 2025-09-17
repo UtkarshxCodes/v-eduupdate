@@ -13,6 +13,9 @@ import { FlipWordsDemo } from '../../components/ui/FlipWordsDemo';
 import SliderSection from '../../components/student/SliderSection';
 import { ThreeDCardDemo2 } from '../../components/ui/ThreeDCardDemo2';
 import { ThreeDCardDemo3 } from '../../components/ui/ThreeDCardDemo3';
+import Hero from '../../components/student/Hero'; // <-- Add this import
+import Hero2 from '../../components/student/Hero2';
+
 const Home = () => {
   const jobsRef = useRef(null);
   const quizRef = useRef(null);
@@ -38,18 +41,33 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden w-full">
       <div className="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-16">
-        <div className="flex flex-col items-center space-y-7 text-center">
-          <SheryIframe /> 
+        {/* Mobile view */}
+        <div className="block md:hidden flex flex-col items-center space-y-7 text-center">
+          <Hero2 />
+          <SheryIframe />
+          <TimelineDemo />
+          <FlipWordsDemo />
+          <AnimatedTestimonialsDemo />
+          <CoverDemo />
+          <ThreeDCardDemo />
+          <ThreeDCardDemo2 />
+          <ThreeDCardDemo3 />
+          <HeroHighlightDemo />
+          <FloatingDockDemo />
+        </div>
+        {/* Desktop view */}
+        <div className="hidden md:flex flex-col items-center space-y-7 text-center">
+          <SheryIframe />
           <HeroParallaxDemo />
           <SliderSection />
           <TimelineDemo />
           <FlipWordsDemo />
           <AnimatedTestimonialsDemo />
-           <CoverDemo />
+          <CoverDemo />
           <ThreeDCardDemo />
           <ThreeDCardDemo2 />
           <ThreeDCardDemo3 />
-          <HeroHighlightDemo />     
+          <HeroHighlightDemo />
           <FloatingDockDemo />
         </div>
       </div>
