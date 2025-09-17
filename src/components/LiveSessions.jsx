@@ -72,6 +72,7 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/HykRfCaMSWw", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/-S2or8JJTUY", title: "V-EDU" },
+    { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
   ],
   'roccosegreti@yahoo.com': [
     { src: "https://www.youtube.com/embed/qIAQeodpgw4", title: "Rocco Cybersecurity Session" },
@@ -175,6 +176,7 @@ const defaultVideos = [
   { src: "https://www.youtube.com/embed/f22IG12YbFU", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/HykRfCaMSWw", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
+  { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
 ];
 
 const LiveSessions = ({ videos: propVideos }) => {
@@ -203,10 +205,31 @@ const LiveSessions = ({ videos: propVideos }) => {
   const isYouTube = (src) => src.includes('youtube.com') || src.includes('youtu.be');
   const isVideoFile = (src) => src.endsWith('.mp4') || src.includes('.mp4');
 
+  // Special card for Lucretia
+  const isLucretia = userEmail === 'lucretiahenry@rocketmail.com';
+
   return (
     <div>
       <h3 className="text-lg font-bold mb-4">Live Sessions / Recordings</h3>
       <p className="text-sm text-gray-500 mb-2">Access session replays here.</p>
+      {isLucretia && (
+        <div className="mb-6">
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl shadow-lg p-4 flex flex-col md:flex-row items-center gap-4">
+            <div className="flex-1">
+              <h4 className="text-white text-xl font-bold mb-2">One-to-One Session</h4>
+              <p className="text-white text-sm mb-2">Exclusive personalized session for you.</p>
+            </div>
+            <div className="flex-1 w-full">
+              <iframe
+                className="w-full aspect-video rounded-lg border-4 border-white shadow-lg"
+                src="https://www.youtube.com/embed/gtNfNC-tCeQ"
+                title="One-to-One Session"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
       {(!videos || videos.length === 0) ? (
         <div className="text-center text-gray-500 py-10">
           No live sessions available at this time.
