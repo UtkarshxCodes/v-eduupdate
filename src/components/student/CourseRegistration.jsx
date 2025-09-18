@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PaymentOptionsModal from "./PaymentOptionsModal";
+import OneToOnePaymentModal from "./OneToOnePaymentModal";
 
 const CourseRegistration = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const CourseRegistration = () => {
     course: "",
   });
   const [showPaymentOptions, setShowPaymentOptions] = useState(false);
+  const [showOneToOneModal, setShowOneToOneModal] = useState(false);
   const [loading, setLoading] = useState(false);
 
   // Countdown logic (4 days cycle)
@@ -200,6 +202,13 @@ const CourseRegistration = () => {
               >
                 {loading ? "Registering..." : "Register & Continue"}
               </button>
+              <button
+                type="button"
+                className="w-full bg-gradient-to-r from-indigo-600 to-purple-500 text-white py-3 rounded-xl font-bold text-lg shadow hover:from-indigo-700 hover:to-purple-600 transition mt-2"
+                onClick={() => setShowOneToOneModal(true)}
+              >
+                One-to-One Register
+              </button>
               {/* Footer note */}
               <div className="mt-4 text-center text-gray-500 text-xs">
                 By registering, you agree to V-EDU’s <a href="#" className="underline">Privacy Policy</a> & <a href="#" className="underline">Terms of Use</a>.<br />
@@ -214,6 +223,11 @@ const CourseRegistration = () => {
       <PaymentOptionsModal
         isOpen={showPaymentOptions}
         onClose={() => setShowPaymentOptions(false)}
+      />
+      {/* One-to-One Payment Modal */}
+      <OneToOnePaymentModal
+        isOpen={showOneToOneModal}
+        onClose={() => setShowOneToOneModal(false)}
       />
     </>
   );
