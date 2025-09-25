@@ -76,6 +76,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/-S2or8JJTUY", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
+    { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
+    { src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
   ],
   'roccosegreti@yahoo.com': [
     { src: "https://www.youtube.com/embed/qIAQeodpgw4", title: "Rocco Cybersecurity Session" },
@@ -187,6 +189,8 @@ const defaultVideos = [
   { src: "https://www.youtube.com/embed/HykRfCaMSWw", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
+  { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
+  { src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
 ];
 
 const LiveSessions = ({ videos: propVideos }) => {
