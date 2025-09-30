@@ -168,6 +168,9 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/zZYjcl4U-s0  ", title: "Data Science" },
     // Example: { src: "YOUR_YOUTUBE_OR_VIDEO_LINK", title: "Data Science Session" },
   ],
+  'smweah@hotmail.com': [
+    // Add session links here for Michael when available
+  ],
 };
 
 const defaultVideos = [
