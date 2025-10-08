@@ -28,10 +28,10 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/2q2gWv2weuc", title: "Data Science" },
     { src: "https://www.youtube.com/embed/eKHgFZrtetY", title: "Data Science" },
     { src: "https://www.youtube.com/embed/nWA-8QLnPVs", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+   // { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
   ],
   'veemal16@gmail.com': [
     { src: "https://www.youtube.com/embed/HDoDuVMqyTY", title: "Data Science" },
@@ -56,9 +56,9 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/90ObajdIPhc", title: "Data Science" }, 
     { src: "https://www.youtube.com/embed/eKHgFZrtetY", title: "Data Science" },
     { src: "https://www.youtube.com/embed/nWA-8QLnPVs", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+  //  { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
      
   ],
   'archana.katangur@gmail.com': [
@@ -80,8 +80,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/-S2or8JJTUY", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
-    { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
-    { src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
+   // { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
+    //{ src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
   ],
   'roccosegreti@yahoo.com': [
     { src: "https://www.youtube.com/embed/qIAQeodpgw4", title: "Rocco Cybersecurity Session" },
@@ -105,10 +105,10 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/90ObajdIPhc", title: "Data Science" }, 
     { src: "https://www.youtube.com/embed/eKHgFZrtetY", title: "Data Science" },  
     { src: "https://www.youtube.com/embed/nWA-8QLnPVs", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
+   // { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
 
   ],
   'conuwa.a@gmail.com': [
@@ -125,8 +125,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/b7B60Wv_mK4", title: "Data Science" },
     { src: "https://www.youtube.com/embed/BsPm3v8xtWo", title: "Data Science" },
     { src: "https://www.youtube.com/embed/qMS3bTQjyjA", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" },  
+   // { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" },
+    //{ src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" },  
      
   ],
   'albertq2000@yahoo.com': [
@@ -144,7 +144,7 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/E_oK8r0a9uU", title: "Data Science" }, 
     { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" },
    { src: "https://www.youtube.com/embed/90ObajdIPhc", title: "Data Science" },
-   { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },  
+  // { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },  
   ],
   'rayhanramadhany@gmail.com': [
    { src: "https://www.youtube.com/embed/7JrHv3FplW0", title: "V-edu" },
@@ -154,11 +154,11 @@ const userVideosMap = {
    { src: "https://www.youtube.com/embed/TbdNUtLWvSA", title: "Data Science" }, 
    { src: "https://www.youtube.com/embed/90ObajdIPhc", title: "Data Science" },
    { src: "https://www.youtube.com/embed/eKHgFZrtetY", title: "Data Science" },
-   { src: "https://www.youtube.com/embed/nWA-8QLnPVs", title: "Data Science" },
-   { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
-   { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
-   { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
-   { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+ //  { src: "https://www.youtube.com/embed/nWA-8QLnPVs", title: "Data Science" },
+ //  { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
+  // { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
+   //{ src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
+   //{ src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
    
    
   ],
@@ -167,8 +167,8 @@ const userVideosMap = {
      { src: "https://www.youtube.com/embed/_NUqqQ33fQQ", title: "Data Science" }, 
      { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },
      { src: "https://www.youtube.com/embed/zZYjcl4U-s0  ", title: "Data Science" },
-     { src: "https://www.youtube.com/embed/YFXnSTFFxrI", title: "Data Science" },
-     { src: "https://www.youtube.com/embed/ouDRaBa7Rxk", title: "Data Science" },
+    // { src: "https://www.youtube.com/embed/YFXnSTFFxrI", title: "Data Science" },
+    // { src: "https://www.youtube.com/embed/ouDRaBa7Rxk", title: "Data Science" },
   ],
   'jprendergass@gmail.com': [
     { src: "https://www.youtube.com/embed/Mv91w39w66c", title: "Data Science" },
@@ -177,11 +177,11 @@ const userVideosMap = {
   'm2v3k4@gmail.com': [
     { src: "https://www.youtube.com/embed/uOAhsc7XcPI", title: "Data Science" },
     { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/YFXnSTFFxrI", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/ouDRaBa7Rxk", title: "Data Science" },
+ //   { src: "https://www.youtube.com/embed/YFXnSTFFxrI", title: "Data Science" },
+   // { src: "https://www.youtube.com/embed/ouDRaBa7Rxk", title: "Data Science" },
   ],
   'smweah@hotmail.com': [
-     { src: "https://www.youtube.com/embed/fzzS2VU2Pvs", title: "Data Science" },
+   //  { src: "https://www.youtube.com/embed/fzzS2VU2Pvs", title: "Data Science" },
   ],
 };
 
@@ -203,9 +203,9 @@ const defaultVideos = [
   { src: "https://www.youtube.com/embed/f22IG12YbFU", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/HykRfCaMSWw", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
-  { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
-  { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
-  { src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
+//  { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
+ // { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
+  //{ src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
 ];
 
 const LiveSessions = ({ videos: propVideos }) => {
@@ -228,7 +228,7 @@ const LiveSessions = ({ videos: propVideos }) => {
           { src: "https://www.youtube.com/embed/cqqQoT3h4Q4", title: "Data Science Session" },
           { src: "https://www.youtube.com/embed/ukz8sb7QNsQ", title: "Data Science Session" },
           { src: "https://www.youtube.com/embed/_JfrUvqS3d0", title: "Data Science Session" },
-          { src: "https://www.youtube.com/embed/9JkgX8_d7zI", title: "Data Science" },
+//          { src: "https://www.youtube.com/embed/9JkgX8_d7zI", title: "Data Science" },
         ]
       : propVideos || userVideosMap[userEmail] || defaultVideos;
   const isYouTube = (src) => src.includes('youtube.com') || src.includes('youtu.be');
