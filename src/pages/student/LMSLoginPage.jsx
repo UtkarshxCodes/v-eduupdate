@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaGraduationCap, FaUserCircle, FaLock, FaSignInAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import api from '../../utils/api'; // axios helper that points to your backend
+import { useNavigate } from 'react-router-dom'; // axios helper that points to your backend
 
 const LMSLoginPage = () => {
   const [email, setEmail] = useState('');
