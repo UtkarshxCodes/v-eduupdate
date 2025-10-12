@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaGraduationCap, FaUserCircle, FaLock, FaSignInAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // axios helper that points to your backend
+import { useNavigate } from 'react-router-dom';
 
 const LMSLoginPage = () => {
   const [email, setEmail] = useState('');
@@ -8,41 +8,104 @@ const LMSLoginPage = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate(); // Navigation hook
 
-  // call backend and map network/5xx to "server down" message
-  const handleLogin = async () => {
-    setError('');
-    try {
-      const resp = await api.post('/auth/login', { email, password });
-      const { token, user } = resp.data;
-      if (token) localStorage.setItem('accessToken', token);
-      sessionStorage.setItem('authUserEmail', user.email);
-      sessionStorage.setItem('authUserName', user.name || user.email);
-      if (user.role === 'admin') navigate('/admin');
-      else navigate('/lms-dashboard');
-    } catch (err) {
-      // Network / DNS / server not reachable
-      if (err.request && !err.response) {
-        // browser couldn't reach the backend (DNS / connection refused / CORS preflight failed)
-        setError('Server is down for now. Please try again later.');
-        return;
-      }
-
-      // Server responded with a status
-      const status = err.response?.status;
-      if (status >= 500) {
-        // server-side error / overload -> "page down" behaviour
-        setError('Server is experiencing heavy load (page down). Please try again later.');
-        return;
-      }
-
-      if (status === 401 || status === 403) {
-        setError('Invalid email or password. Please try again.');
-        return;
-      }
-
-      // fallback to server message or generic
-      const msg = err.response?.data?.message || err.message || 'Login failed. Please try again.';
-      setError(msg);
+  const handleLogin = () => {
+    // Validate email and password
+    if (email === 'StudentID@v-edu.us' && password === 'V-edu.us1') {
+      sessionStorage.setItem('authUserEmail', email); // Store authentication state
+      sessionStorage.setItem('authUserName', 'Default User'); // Store user name
+      navigate('/lms-dashboard'); // Redirect to LMSDashboard
+    } else if (
+      (email === 'christianocampo1230@hotmail.com' && password === 'Vedu@123') ||
+      (email === 'archana.katangur@gmail.com' && password === 'Vedu@123') ||
+      (email === 'roccosegreti@yahoo.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem(
+        'authUserName',
+        email === 'archana.katangur@gmail.com'
+          ? 'Archana'
+          : email === 'roccosegreti@yahoo.com'
+          ? 'Rocco'
+          : 'Christiano'
+      );
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'lucretiahenry@rocketmail.com' && password === 'Vedu@123') ||
+      (email === 'veemal16@gmail.com' && password === 'Vedu@123') ||
+      (email === 'roccosegreti@yahoo.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem(
+        'authUserName',
+        email === 'roccosegreti@yahoo.com'
+          ? 'Rocco'
+          : email === 'veemal16@gmail.com'
+          ? 'Veemal'
+          : 'Lucretia'
+      );
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'mushfiqrhmn1@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Mushfiq');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'conuwa.a@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'onuwabuchi');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'russellmbaker@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Russell');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'albertq2000@yahoo.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Albert');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'andinihamid1111@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Hamid');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'rayhanramadhany@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Rayhan');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'shyfulla@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Jhonny');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'phyllissimmo@yahoo.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Simmons');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'jprendergass@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Justin');
+      navigate('/lms-dashboard');
+    } else if (
+      (email === 'm2v3k4@gmail.com' && password === 'Vedu@123')
+    ) {
+      sessionStorage.setItem('authUserEmail', email);
+      sessionStorage.setItem('authUserName', 'Md vakil khan');
+      navigate('/lms-dashboard');
+    } else {
+      setError('Invalid email or password. Please try again.');
     }
   };
 
