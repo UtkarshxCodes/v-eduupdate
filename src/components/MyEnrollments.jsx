@@ -20,6 +20,16 @@ const MyEnrollments = ({ userEmail }) => {
   const isShyfulla = userEmail === 'shyfulla@gmail.com';
   const isMdVakil = userEmail === 'm2v3k4@gmail.com';
   const isMichael = userEmail === 'smweah@hotmail.com';
+  const isOluwatayo = userEmail === 'go.ccam.global@gmail.com'; // new
+  const isJosheph = userEmail === 'Jlgoeh@gmail.com'; // new
+  const isMichaelOrNew = isMichael || isOluwatayo || isJosheph;
+  const isMichaelOrNewNames = (email) => {
+    if (email === 'smweah@hotmail.com') return 'Michael';
+    if (email === 'go.ccam.global@gmail.com') return 'Oluwatayo';
+    if (email === 'Jlgoeh@gmail.com') return 'Josheph';
+    return null;
+  };
+
   // Treat archana, conuwa, and shyfulla as cyber users
   const isCyberUser =
     userEmail === 'christianocampo1230@hotmail.com' ||
@@ -42,8 +52,8 @@ const MyEnrollments = ({ userEmail }) => {
     enrollmentDate = 'September, 2025';
   } else if (isMdVakil) {
     enrollmentDate = 'September, 2025';
-  } else if (isMichael) {
-    enrollmentDate = 'September, 2025';
+  } else if (isMichaelOrNew) {
+    enrollmentDate = 'September, 2025'; // enrollment date for Michael, Oluwatayo, Josheph
   } else if (isCyberUser) {
     enrollmentDate = 'June 15, 2025';
   } else if (isAndini) {
@@ -56,7 +66,7 @@ const MyEnrollments = ({ userEmail }) => {
     <div className="mt-6">
       <h3 className="text-lg font-bold mb-4">📚 My Enrollments</h3>
       <div className="bg-white p-6 rounded-lg shadow-md">
-        {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isMichael) && !isCyberUser ? (
+        {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isMichael || isOluwatayo || isJosheph || isMichaelOrNew) && !isCyberUser ? (
           <div className="border rounded-lg p-4 mb-6">
             <h4 className="text-xl font-bold mb-2">🎓 Data Science & AI</h4>
             <p className="text-sm text-gray-500 mb-2">Enrolled On: {enrollmentDate}</p>
@@ -102,7 +112,7 @@ const MyEnrollments = ({ userEmail }) => {
           <div className="border rounded-lg p-4">
             <h4 className="text-lg font-bold mb-4">📜 Curriculum Modules</h4>
             <ul className="space-y-4">
-              {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isMichael) && !isCyberUser ? (
+              {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isMichael || isOluwatayo || isJosheph) && !isCyberUser ? (
                 <>
                   <li className="flex items-center gap-3">
                     <span>📊</span>
