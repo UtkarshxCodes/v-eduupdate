@@ -188,6 +188,8 @@ const userVideosMap = {
   'smweah@hotmail.com': [],
   'go.ccam.global@gmail.com': [],
   'Jlgoeh@gmail.com': [],
+  'ronhayes.sr@gmail.com': [
++    { src: "https://www.youtube.com/embed/NDLIDvTWB78", title: "Cybersecurity & Ethical hack" },
 };
 
 const defaultVideos = [

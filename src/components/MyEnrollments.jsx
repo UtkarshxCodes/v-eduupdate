@@ -29,11 +29,13 @@ const MyEnrollments = ({ userEmail }) => {
     if (email === 'Jlgoeh@gmail.com') return 'Josheph';
     return null;
   };
+  const isRonHayes = userEmail === 'ronhayes.sr@gmail.com';
 
   // Treat archana, conuwa, and shyfulla as cyber users
   const isCyberUser =
     userEmail === 'christianocampo1230@hotmail.com' ||
     userEmail === 'archana.katangur@gmail.com' ||
+    userEmail === 'ronhayes.sr@gmail.com' ||
     userEmail === 'albertq2000@yahoo.com' ||
     userEmail === 'conuwa.a@gmail.com' ||
     userEmail === 'shyfulla@gmail.com';
@@ -54,6 +56,8 @@ const MyEnrollments = ({ userEmail }) => {
     enrollmentDate = 'September, 2025';
   } else if (isMichaelOrNew) {
     enrollmentDate = 'September, 2025'; // enrollment date for Michael, Oluwatayo, Josheph
+  } else if (isRonHayes) {
+    enrollmentDate = 'October , 2025';
   } else if (isCyberUser) {
     enrollmentDate = 'June 15, 2025';
   } else if (isAndini) {
