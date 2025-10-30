@@ -55,7 +55,8 @@ const LMSDashboard = () => {
     'archana.katangur@gmail.com',
     'albertq2000@yahoo.com',
     'conuwa.a@gmail.com',
-    'shyfulla@gmail.com'
+    'shyfulla@gmail.com',
+    'ronhayes.sr@gmail.com'
   ].includes(userEmail);
 
   return (
