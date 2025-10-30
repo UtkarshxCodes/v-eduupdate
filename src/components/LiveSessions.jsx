@@ -32,6 +32,7 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
     { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
     { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/LBWtaGmk0M0", title: "Data Science" },
   ],
   'veemal16@gmail.com': [
     { src: "https://www.youtube.com/embed/HDoDuVMqyTY", title: "Data Science" },
@@ -59,6 +60,7 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/vhpM64j-nRE", title: "Data Science" },
     { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
     { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/LBWtaGmk0M0", title: "Data Science" },
      
   ],
   'archana.katangur@gmail.com': [
@@ -78,10 +80,11 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/f22IG12YbFU", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/HykRfCaMSWw", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/aq7YcstDMGw", title: "V-EDU" },
-    { src: "https://www.youtube.com/embed/-S2or8JJTUY", title: "V-EDU" },
-    { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
+ { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
     { src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
+    { src: "https://www.youtube.com/embed/H3Un5oenoQE", title: "V-EDU" },
+    { src: "https://www.youtube.com/embed/wTTtC4tnrIA", title: "V-EDU" },
   ],
   'roccosegreti@yahoo.com': [
     { src: "https://www.youtube.com/embed/qIAQeodpgw4", title: "Rocco Cybersecurity Session" },
@@ -109,6 +112,7 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
     { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
     { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/LBWtaGmk0M0", title: "Data Science" },
 
   ],
   'conuwa.a@gmail.com': [
@@ -159,6 +163,7 @@ const userVideosMap = {
    { src: "https://www.youtube.com/embed/zZYjcl4U-s0", title: "Data Science" },
    { src: "https://www.youtube.com/embed/CCeX56AmA2I", title: "Data Science" },
    { src: "https://www.youtube.com/embed/_qMZKGxPdJM", title: "Data Science" },
+   { src: "https://www.youtube.com/embed/LBWtaGmk0M0", title: "Data Science" },
    
    
   ],
@@ -180,15 +185,9 @@ const userVideosMap = {
    { src: "https://www.youtube.com/embed/YFXnSTFFxrI", title: "Data Science" },
    { src: "https://www.youtube.com/embed/ouDRaBa7Rxk", title: "Data Science" },
   ],
-  'smweah@hotmail.com': [ // Michael - placeholder, add unique videos later
-  ],
-  'go.ccam.global@gmail.com': [ // Oluwatayo - placeholder
-  ],
-  'Jlgoeh@gmail.com': [ // Josheph - placeholder
-  ],
-  'smweah@hotmail.com': [
-   //  { src: "https://www.youtube.com/embed/fzzS2VU2Pvs", title: "Data Science" },
-  ],
+  'smweah@hotmail.com': [],
+  'go.ccam.global@gmail.com': [],
+  'Jlgoeh@gmail.com': [],
 };
 
 const defaultVideos = [
@@ -212,10 +211,12 @@ const defaultVideos = [
  { src: "https://www.youtube.com/embed/6zMUMfLOwhY", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/3covHChwdKs", title: "V-EDU" },
   { src: "https://www.youtube.com/embed/7ZNNiY2dRaQ", title: "V-EDU" },
+  { src: "https://www.youtube.com/embed/H3Un5oenoQE", title: "V-EDU" },
+  { src: "https://www.youtube.com/embed/wTTtC4tnrIA", title: "V-EDU" },
 ];
 
 const LiveSessions = ({ videos: propVideos }) => {
-  const userEmail = sessionStorage.getItem('authUserEmail');
+  const userEmail = typeof window !== 'undefined' ? sessionStorage.getItem('authUserEmail') : null;
   const videos =
     userEmail === 'shyfulla@gmail.com'
       ? [
@@ -236,8 +237,8 @@ const LiveSessions = ({ videos: propVideos }) => {
           { src: "https://www.youtube.com/embed/_JfrUvqS3d0", title: "Data Science Session" },
         ]
       : propVideos || userVideosMap[userEmail] || defaultVideos;
-  const isYouTube = (src) => src.includes('youtube.com') || src.includes('youtu.be');
-  const isVideoFile = (src) => src.endsWith('.mp4') || src.includes('.mp4');
+  const isYouTube = (src) => typeof src === 'string' && (src.includes('youtube.com') || src.includes('youtu.be'));
+  const isVideoFile = (src) => typeof src === 'string' && (src.endsWith('.mp4') || src.includes('.mp4'));
 
   // Special card for Lucretia
   const isLucretia = userEmail === 'lucretiahenry@rocketmail.com';
@@ -254,17 +255,31 @@ const LiveSessions = ({ videos: propVideos }) => {
               <p className="text-white text-sm mb-2">Exclusive personalized session for you.</p>
             </div>
             <div className="flex-1 w-full">
-              <iframe
-                className="w-full aspect-video rounded-lg border-4 border-white shadow-lg"
-                src="https://www.youtube.com/embed/gtNfNC-tCeQ"
-                title="One-to-One Session"
-                allowFullScreen
-              ></iframe>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <iframe
+                  className="w-full aspect-video rounded-lg border-4 border-white shadow-lg"
+                  src="https://www.youtube.com/embed/gtNfNC-tCeQ"
+                  title="One-to-One Session"
+                  allowFullScreen
+                ></iframe>
+                <iframe
+                  className="w-full aspect-video rounded-lg border-4 border-white shadow-lg"
+                  src="https://www.youtube.com/embed/3aqRA-5ENl0"
+                  title="One-to-One Session"
+                  allowFullScreen
+                ></iframe>
+                 <iframe
+                  className="w-full aspect-video rounded-lg border-4 border-white shadow-lg"
+                  src="https://www.youtube.com/embed/rGGaXNCuS7M"
+                  title="One-to-One Session "
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       )}
-      {(!videos || videos.length === 0) ? (
+      {videos.length === 0 ? (
         <div className="text-center text-gray-500 py-10">
           No live sessions available at this time.
         </div>
