@@ -185,8 +185,8 @@ const userVideosMap = {
    { src: "https://www.youtube.com/embed/YFXnSTFFxrI", title: "Data Science" },
    { src: "https://www.youtube.com/embed/ouDRaBa7Rxk", title: "Data Science" },
   ],
-  'smweah@hotmail.com': [],
-  'go.ccam.global@gmail.com': [],
+  'smweah@hotmail.com': [ { src: "https://www.youtube.com/embed/RDy3Yf3nEyw", title: "Data Science" },],
+  'go.ccam.global@gmail.com': [{src: "https://www.youtube.com/embed/RDy3Yf3nEyw", title: "Data Science"},],
   'Jlgoeh@gmail.com': [],
   'ronhayes.sr@gmail.com': [
   { src: "https://www.youtube.com/embed/NDLIDvTWB78", title: "Cybersecurity & Ethical hack" },
