@@ -62,8 +62,6 @@ const Home = () => {
           <HeroParallaxDemo />
           <SliderSection />
           <TimelineDemo />
-          <FlipWordsDemo />
-          <AnimatedTestimonialsDemo />
           <CoverDemo />
           <ThreeDCardDemo />
           <ThreeDCardDemo2 />
