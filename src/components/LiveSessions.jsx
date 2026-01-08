@@ -319,6 +319,7 @@ const LiveSessions = ({ videos: propVideos }) => {
             src: "https://v-eduvideos.s3.us-east-1.amazonaws.com/Untitled+video+-+Made+with+Clipchamp+(1)+(1).mp4",
             title: "Cyber Security",
           },
+            { src: "https://www.youtube.com/embed/JgP5IIpOGcI", title: "V-EDU" },
         ]
       : userEmail === 'conuwa.a@gmail.com'
       ? [
