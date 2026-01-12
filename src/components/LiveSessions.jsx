@@ -288,7 +288,8 @@ const userVideosMap = {
   'ronhayes.sr@gmail.com': [
   { src: "https://www.youtube.com/embed/NDLIDvTWB78", title: "Cybersecurity & Ethical hack" },
   { src: "https://www.youtube.com/embed/D4_lH0N09CM", title: "Cybersecurity & Ethical hack" },
-  { src: "https://www.youtube.com/embed/ElMxQLNKw5Y", title: "Cybersecurity & Ethical hack" }, 
+  { src: "https://www.youtube.com/embed/ElMxQLNKw5Y", title: "Cybersecurity & Ethical hack" },
+  { src: "https://www.youtube.com/embed/oS8jQ_CFE5k", title: "Cybersecurity & Ethical hack" }, 
 ],
 };
 
