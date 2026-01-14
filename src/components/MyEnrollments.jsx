@@ -38,7 +38,8 @@ const MyEnrollments = ({ userEmail }) => {
     userEmail === 'ronhayes.sr@gmail.com' ||
     userEmail === 'albertq2000@yahoo.com' ||
     userEmail === 'conuwa.a@gmail.com' ||
-    userEmail === 'shyfulla@gmail.com';
+    userEmail === 'shyfulla@gmail.com' ||
+    userEmail === 'roccosegreti@yahoo.com';
 
   // Set enrollment date based on user
   let enrollmentDate = '';
@@ -76,7 +77,7 @@ const MyEnrollments = ({ userEmail }) => {
             <p className="text-sm text-gray-500 mb-2">Enrolled On: {enrollmentDate}</p>
             <p className="text-sm text-gray-500 mb-2">Course ID: DS-AI-101</p>
             <p className="text-sm text-gray-500 mb-2">Instructor: V-edu</p>
-            <p className="text-sm text-gray-500 mb-2">Progress:1%</p>
+            <p className="text-sm text-gray-500 mb-2">Progress:29%</p>
             <p className="text-sm text-gray-500 mb-2">Status: In Progress</p>
             <p className="text-sm text-gray-500 mb-2">Duration: 26 weeks</p>
             <p className="text-sm text-gray-500 mb-4">
@@ -96,7 +97,7 @@ const MyEnrollments = ({ userEmail }) => {
             <p className="text-sm text-gray-500 mb-2">Enrolled On: {enrollmentDate}</p>
             <p className="text-sm text-gray-500 mb-2">Course ID: CSEH-205</p>
             <p className="text-sm text-gray-500 mb-2">Instructor: V-edu</p>
-            <p className="text-sm text-gray-500 mb-2">Progress: 15%</p>
+            <p className="text-sm text-gray-500 mb-2">Progress: 55%</p>
             <p className="text-sm text-gray-500 mb-2">Status: In Progress</p>
             <p className="text-sm text-gray-500 mb-2">Duration: 26 weeks</p>
             <p className="text-sm text-gray-500 mb-4">

@@ -268,7 +268,9 @@ const userVideosMap = {
    { src: "https://www.youtube.com/embed/Y3JDmbtRK1o", title: "Data Science" }, 
    { src: "https://www.youtube.com/embed/oytt8pzTt4c", title: "Data Science" },     
   ],
-  'go.ccam.global@gmail.com': [{src: "https://www.youtube.com/embed/RDy3Yf3nEyw", title: "Data Science"},],
+  'go.ccam.global@gmail.com': [{src: "https://www.youtube.com/embed/RDy3Yf3nEyw", title: "Data Science"},
+      { src: "https://www.youtube.com/embed/gb-r25fhoCk", title: "Data Science" },
+  ],
   'Jlgoeh@gmail.com': [{ src: "https://www.youtube.com/embed/a5OMrn55n64", title: "Data Science" },
        { src: "https://www.youtube.com/embed/AkxPdzCxc-s", title: "Data Science" },
        { src: "https://www.youtube.com/embed/acWCEuvPixw", title: "Data Science" },
@@ -327,7 +329,8 @@ const LiveSessions = ({ videos: propVideos }) => {
             src: "https://v-eduvideos.s3.us-east-1.amazonaws.com/Untitled+video+-+Made+with+Clipchamp+(1)+(1).mp4",
             title: "Cyber Security",
           },
-            { src: "https://www.youtube.com/embed/JgP5IIpOGcI", title: "V-EDU" },
+            { src: "https://www.youtube.com/embed/JgP5IIpOGcI", title: "V-EDU" }, 
+            { src: "https://www.youtube.com/embed/LH6zf4mEMfo", title: "V-EDU" },  
         ]
       : userEmail === 'conuwa.a@gmail.com'
       ? [
