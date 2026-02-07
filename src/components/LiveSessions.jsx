@@ -112,7 +112,8 @@ const userVideosMap = {
   'roccosegreti@yahoo.com': [
     { src: "https://www.youtube.com/embed/qIAQeodpgw4", title: "Rocco Cybersecurity Session" },
     { src: "https://www.youtube.com/embed/sx6hgnC6YNY", title: "Rocco Cybersecurity Session" },
-     { src: "https://v-eduvideos.s3.us-east-1.amazonaws.com/Untitled+video+-+Made+with+Clipchamp+(1)+(1).mp4",title: "Cyber Security",},
+     { src: "https://v-eduvideos.s3.us-east-1.amazonaws.com/Untitled+video+-+Made+with+Clipchamp+(1)+(1).mp4",title: "Cyber Security"},
+     { src: "https://www.youtube.com/embed/BOyDVlf8Iv0", title: "Cybersecurity & Ethical hack" }, 
   ],
   'mushfiqrhmn1@gmail.com': [
     { src: "https://www.youtube.com/embed/_mC7gdoqOf4", title: "Data Science Session" },
@@ -345,7 +346,8 @@ const userVideosMap = {
   { src: "https://www.youtube.com/embed/NDLIDvTWB78", title: "Cybersecurity & Ethical hack" },
   { src: "https://www.youtube.com/embed/D4_lH0N09CM", title: "Cybersecurity & Ethical hack" },
   { src: "https://www.youtube.com/embed/ElMxQLNKw5Y", title: "Cybersecurity & Ethical hack" },
-  { src: "https://www.youtube.com/embed/oS8jQ_CFE5k", title: "Cybersecurity & Ethical hack" }, 
+  { src: "https://www.youtube.com/embed/oS8jQ_CFE5k", title: "Cybersecurity & Ethical hack" },
+  { src: "https://www.youtube.com/embed/BOyDVlf8Iv0", title: "Cybersecurity & Ethical hack" }, 
 ],
 };
 
