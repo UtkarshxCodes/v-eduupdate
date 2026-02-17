@@ -22,11 +22,13 @@ const MyEnrollments = ({ userEmail }) => {
   const isMichael = userEmail === 'smweah@hotmail.com';
   const isOluwatayo = userEmail === 'go.ccam.global@gmail.com'; // new
   const isJosheph = userEmail === 'Jlgoeh@gmail.com'; // new
-  const isMichaelOrNew = isMichael || isOluwatayo || isJosheph;
+  const isNathaniel = userEmail === 'nathanielonifade@gmail.com'; // new for Data Science
+  const isMichaelOrNew = isMichael || isOluwatayo || isJosheph || isNathaniel;
   const isMichaelOrNewNames = (email) => {
     if (email === 'smweah@hotmail.com') return 'Michael';
     if (email === 'go.ccam.global@gmail.com') return 'Oluwatayo';
     if (email === 'Jlgoeh@gmail.com') return 'Josheph';
+    if (email === 'nathanielonifade@gmail.com') return 'Nathaniel';
     return null;
   };
   const isRonHayes = userEmail === 'ronhayes.sr@gmail.com';

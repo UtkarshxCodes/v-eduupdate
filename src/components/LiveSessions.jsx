@@ -1,6 +1,7 @@
 import React from 'react';
 
 const userVideosMap = {
+  'nathanielonifade@gmail.com': [], // Reserved for Nathaniel, no sessions yet
   'lucretiahenry@rocketmail.com': [
     { src: "https://www.youtube.com/embed/I09YA-9puVI", title: "Data Science" },
     { src: "https://www.youtube.com/embed/jtJ943buPRM", title: "Data Science" },
