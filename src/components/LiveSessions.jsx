@@ -89,6 +89,8 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/er-Pd9U11LM", title: "Data Science" }, 
     { src: "https://www.youtube.com/embed/knf9xytbEfc", title: "Data Science" },
     { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/u6IRoQ8RpCA", title: "Data Science" },
+   { src: "https://www.youtube.com/embed/DYHZUYMCtm0", title: "Data Science" },
   ],
   'archana.katangur@gmail.com': [
     { src: "https://www.youtube.com/embed/emvxiMdmwMw", title: "V-EDU" },
@@ -227,7 +229,9 @@ const userVideosMap = {
      { src: "https://www.youtube.com/embed/M1A259m_Buk", title: "Data Science" },
     { src: "https://www.youtube.com/embed/er-Pd9U11LM", title: "Data Science" },
      { src: "https://www.youtube.com/embed/knf9xytbEfc", title: "Data Science" }, 
-     { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },     
+     { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" }, 
+     { src: "https://www.youtube.com/embed/u6IRoQ8RpCA", title: "Data Science" },
+     { src: "https://www.youtube.com/embed/DYHZUYMCtm0", title: "Data Science" },    
   ],
   'phyllissimmo@yahoo.com': [
      { src: "https://www.youtube.com/embed/TDWiqjdynhQ", title: "Data Science" }, 
@@ -262,7 +266,8 @@ const userVideosMap = {
       { src: "https://www.youtube.com/embed/er-Pd9U11LM", title: "Data Science" },
        { src: "https://www.youtube.com/embed/knf9xytbEfc", title: "Data Science" }, 
        { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },
- 
+       { src: "https://www.youtube.com/embed/u6IRoQ8RpCA", title: "Data Science" },
+       { src: "https://www.youtube.com/embed/DYHZUYMCtm0", title: "Data Science" },
   ],
   'jprendergass@gmail.com': [
     { src: "https://www.youtube.com/embed/Mv91w39w66c", title: "Data Science" },
@@ -298,7 +303,9 @@ const userVideosMap = {
    { src: "https://www.youtube.com/embed/M1A259m_Buk", title: "Data Science" },
    { src: "https://www.youtube.com/embed/er-Pd9U11LM", title: "Data Science" },
     { src: "https://www.youtube.com/embed/knf9xytbEfc", title: "Data Science" },
-    { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },     
+    { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/u6IRoQ8RpCA", title: "Data Science" },
+   { src: "https://www.youtube.com/embed/DYHZUYMCtm0", title: "Data Science" },     
   ],
   'smweah@hotmail.com': [ { src: "https://www.youtube.com/embed/RDy3Yf3nEyw", title: "Data Science" },
    { src: "https://www.youtube.com/embed/a5OMrn55n64", title: "Data Science" },
@@ -326,7 +333,9 @@ const userVideosMap = {
     { src: "https://www.youtube.com/embed/M1A259m_Buk", title: "Data Science" },
     { src: "https://www.youtube.com/embed/er-Pd9U11LM", title: "Data Science" },
      { src: "https://www.youtube.com/embed/knf9xytbEfc", title: "Data Science" }, 
-     { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },   
+     { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },
+     { src: "https://www.youtube.com/embed/u6IRoQ8RpCA", title: "Data Science" },
+    { src: "https://www.youtube.com/embed/DYHZUYMCtm0", title: "Data Science" },   
   ],
   'go.ccam.global@gmail.com': [{src: "https://www.youtube.com/embed/RDy3Yf3nEyw", title: "Data Science"},
       { src: "https://www.youtube.com/embed/gb-r25fhoCk", title: "Data Science" },
@@ -363,6 +372,8 @@ const userVideosMap = {
        { src: "https://www.youtube.com/embed/er-Pd9U11LM", title: "Data Science" }, 
         { src: "https://www.youtube.com/embed/knf9xytbEfc", title: "Data Science" },
         { src: "https://www.youtube.com/embed/FCb3QVqik2M", title: "Data Science" },
+        { src: "https://www.youtube.com/embed/u6IRoQ8RpCA", title: "Data Science" },
+        { src: "https://www.youtube.com/embed/DYHZUYMCtm0", title: "Data Science" },
       ],
   'ronhayes.sr@gmail.com': [
   { src: "https://www.youtube.com/embed/NDLIDvTWB78", title: "Cybersecurity & Ethical hack" },
@@ -372,6 +383,7 @@ const userVideosMap = {
   { src: "https://www.youtube.com/embed/BOyDVlf8Iv0", title: "Cybersecurity & Ethical hack" },
    { src: "https://www.youtube.com/embed/kxD2Mv88WVE", title: "Cybersecurity & Ethical hack" },
     { src: "https://www.youtube.com/embed/2fkf5KgOvLg", title: "Cybersecurity & Ethical hack" }, 
+    { src: "https://www.youtube.com/embed/90D09wDut1A", title: "Cybersecurity & Ethical hack" }
    
 ],
 };
