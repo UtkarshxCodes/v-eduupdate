@@ -23,12 +23,14 @@ const MyEnrollments = ({ userEmail }) => {
   const isOluwatayo = userEmail === 'go.ccam.global@gmail.com'; // new
   const isJosheph = userEmail === 'Jlgoeh@gmail.com'; // new
   const isNathaniel = userEmail === 'nathanielonifade@gmail.com'; // new for Data Science
-  const isMichaelOrNew = isMichael || isOluwatayo || isJosheph || isNathaniel;
+  const isTyron = userEmail === 'sycrosd4@comcast.net'; // new for Data Science
+  const isMichaelOrNew = isMichael || isOluwatayo || isJosheph || isNathaniel || isTyron;
   const isMichaelOrNewNames = (email) => {
     if (email === 'smweah@hotmail.com') return 'Michael';
     if (email === 'go.ccam.global@gmail.com') return 'Oluwatayo';
     if (email === 'Jlgoeh@gmail.com') return 'Josheph';
     if (email === 'nathanielonifade@gmail.com') return 'Nathaniel';
+    if (email === 'sycrosd4@comcast.net') return 'Tyron';
     return null;
   };
   const isRonHayes = userEmail === 'ronhayes.sr@gmail.com';
@@ -59,6 +61,8 @@ const MyEnrollments = ({ userEmail }) => {
     enrollmentDate = 'September, 2025';
   } else if (isNathaniel) {
     enrollmentDate = 'February, 2026';
+  } else if (isTyron) {
+    enrollmentDate = 'February, 2026';
   } else if (isMichaelOrNew) {
     enrollmentDate = 'September, 2025'; // enrollment date for Michael, Oluwatayo, Josheph
   } else if (isRonHayes) {
@@ -75,7 +79,7 @@ const MyEnrollments = ({ userEmail }) => {
     <div className="mt-6">
       <h3 className="text-lg font-bold mb-4">📚 My Enrollments</h3>
       <div className="bg-white p-6 rounded-lg shadow-md">
-        {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isNathaniel || isMichael || isOluwatayo || isJosheph || isMichaelOrNew) && !isCyberUser ? (
+        {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isNathaniel || isTyron || isMichael || isOluwatayo || isJosheph || isMichaelOrNew) && !isCyberUser ? (
           <div className="border rounded-lg p-4 mb-6">
             <h4 className="text-xl font-bold mb-2">🎓 Data Science & AI</h4>
             <p className="text-sm text-gray-500 mb-2">Enrolled On: {enrollmentDate}</p>
@@ -121,7 +125,7 @@ const MyEnrollments = ({ userEmail }) => {
           <div className="border rounded-lg p-4">
             <h4 className="text-lg font-bold mb-4">📜 Curriculum Modules</h4>
             <ul className="space-y-4">
-              {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isNathaniel || isMichael || isOluwatayo || isJosheph || isMichaelOrNew) && !isCyberUser ? (
+              {(isLucretia || isVeemal || isRonesh || isMushfiq || isRussell || isAndini || isRayhan || isSimmons || isJustin || isMdVakil || isNathaniel || isTyron || isMichael || isOluwatayo || isJosheph || isMichaelOrNew) && !isCyberUser ? (
                 <>
                   <li className="flex items-center gap-3">
                     <span>📊</span>

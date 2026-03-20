@@ -54,7 +54,8 @@ const LMSLoginPage = () => {
       (email === 'smweah@hotmail.com' && password === 'Vedu@123') ||
       (email === 'go.ccam.global@gmail.com' && password === 'Vedu@123') ||
       (email === 'Jlgoeh@gmail.com' && password === 'Vedu@123') ||
-      (email === 'nathanielonifade@gmail.com' && password === 'Vedu@123')
+      (email === 'nathanielonifade@gmail.com' && password === 'Vedu@123') ||
+      (email === 'sycrosd4@comcast.net' && password === 'Vedu@123')
     ) {
       sessionStorage.setItem('authUserEmail', email);
       sessionStorage.setItem(
@@ -65,7 +66,9 @@ const LMSLoginPage = () => {
           ? 'Oluwatayo'
           : email === 'Jlgoeh@gmail.com'
           ? 'Josheph'
-          : 'Nathaniel'
+          : email === 'nathanielonifade@gmail.com'
+          ? 'Nathaniel'
+          : 'Tyron'
       );
       navigate('/lms-dashboard');
     } else if (
