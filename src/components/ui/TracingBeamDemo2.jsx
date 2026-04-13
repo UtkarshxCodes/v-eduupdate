@@ -7,7 +7,7 @@ const webinars = [
 		title: "AI Skills: Your Ticket to a Future-Proof Career",
 		image:
 			"https://static.vecteezy.com/system/resources/previews/035/794/434/non_2x/interactive-digital-board-isolated-cartoon-illustrations-vector.jpg",
-		date: "August 26, 2025 • 6 PM EST",
+		date: "August 26, 2026 • 6 PM EST",
 		speaker: "Dr. Neha Sharma, AI Automation Expert",
 		duration: "90 minutes",
 		format: "Live Online",
@@ -23,7 +23,7 @@ const webinars = [
 		title: "Cybersecurity in 2025: Career Opportunities & Skills You Need",
 		image:
 			"https://static.vecteezy.com/system/resources/previews/047/232/216/non_2x/healthcare-big-data-abstract-concept-illustration-vector.jpg",
-		date: "September 5, 2025 • 7 PM EST",
+		date: "September 5, 2026 • 7 PM EST",
 		speaker: "Mark Wilson, Cybersecurity Consultant (ex-Deloitte)",
 		duration: "75 minutes",
 		format: "Live Workshop",
@@ -39,7 +39,7 @@ const webinars = [
 		title: "Data to Decisions: Launching a Career in Data Science",
 		image:
 			"https://static.vecteezy.com/system/resources/previews/047/231/860/non_2x/data-driven-decision-making-abstract-concept-illustration-vector.jpg",
-		date: "September 15, 2025 • 6 PM EST",
+		date: "September 15, 2026 • 6 PM EST",
 		speaker: "Lidia J., Data Analyst & V-EDU Alumna",
 		duration: "60 minutes",
 		format: "Interactive Webinar",
@@ -55,12 +55,12 @@ const webinars = [
 		title: "DevOps & Cloud: Skills That Companies Hire For",
 		image:
 			"https://img.freepik.com/premium-vector/business-team-analyzing-data-pie-chart_778176-1189.jpg",
-		date: "September 22, 2025 • 7 PM EST",
+		date: "September 22, 2026 • 7 PM EST",
 		speaker: "Ravi Patel, AWS Solutions Architect",
 		duration: "90 minutes",
 		format: "Hands-On Workshop",
 		learn: [
-			"DevOps & Cloud job market in 2025",
+			"DevOps & Cloud job market in 2026",
 			"Live cloud deployment on AWS",
 			"CI/CD pipelines explained simply",
 			"Building a career in DevOps and Cloud Engineering",
@@ -135,15 +135,15 @@ export function TracingBeamDemo2() {
 						(Available for enrolled students inside LMS)
 					</p>
 					<ul className="list-disc pl-5 text-gray-700">
-						<li>Breaking Into AI Careers (July 2025) – Recording Available</li>
+						<li>$2,999ng Into AI Careers (Jan 2026) – Recording Available</li>
 						<li>
-							Ethical Hacking Crash Course (June 2025) – Recording Available
+							Ethical Hacking Crash Course (Jan 2026) – Recording Available
 						</li>
 						<li>
-							Data Science Career Starter Pack (May 2025) – Recording Available
+							Data Science Career Starter Pack (Feb 2026) – Recording Available
 						</li>
 						<li>
-							Cloud Computing Foundations (April 2025) – Recording Available
+							Cloud Computing Foundations (March 2026) – Recording Available
 						</li>
 					</ul>
 				</section>

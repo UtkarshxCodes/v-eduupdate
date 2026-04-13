@@ -60,9 +60,6 @@ const Navbar = ({ jobsRef }) => {
         { to: "/careers/cyber", label: "Cyber Security & Ethical Hack" },
         { to: "/careers/data", label: "Data Science & AI" },
         { to: "/careers/cloud", label: "Cloud Computing & DevOps" },
-        { to: "/careers/digital", label: "Digital Marketing & Growth" },
-        { to: "/careers/fullstack", label: "Fullstack Software Dev" },
-        { to: "/careers/uiux", label: "UI & UX Design" },
       ],
     },
     {
@@ -135,9 +132,6 @@ const Navbar = ({ jobsRef }) => {
                 <button onClick={() => handleNavClick("/careers/cyber")} className="dropdown-item text-black">Cyber Security & Ethical Hack</button>
                 <button onClick={() => handleNavClick("/careers/data")} className="dropdown-item text-black">Data Science & AI</button>
                 <button onClick={() => handleNavClick("/careers/cloud")} className="dropdown-item text-black">Cloud Computing & DevOps</button>
-                <button onClick={() => handleNavClick("/careers/digital")} className="dropdown-item text-black">Digital Marketing & Growth</button>
-                <button onClick={() => handleNavClick("/careers/fullstack")} className="dropdown-item text-black">Fullstack Software Dev</button>
-                <button onClick={() => handleNavClick("/careers/uiux")} className="dropdown-item text-black">UI & UX Design</button>
               </div>
             </div>
           </div>

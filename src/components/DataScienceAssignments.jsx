@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 
 const DataScienceAssignments = ({ userEmail }) => {
-  // Allow assignments for Lucretia, Veemal, and Mushfiq
+  // Allow assignments for Lucretia, Veemal, Mushfiq, and other Data Science students
   const isLucretia = userEmail === 'lucretiahenry@rocketmail.com';
   const isVeemal = userEmail === 'veemal16@gmail.com';
   const isMushfiq = userEmail === 'mushfiqrhmn1@gmail.com';
+  const isLalitha = userEmail === 'LalithaBadambvsr@gmail.com';
+  const isTyron = userEmail === 'sycrosd4@comcast.net';
+  const allowAssignments = isLucretia || isVeemal || isMushfiq || isLalitha || isTyron;
 
   const assignments = [
     {
@@ -117,6 +120,15 @@ const DataScienceAssignments = ({ userEmail }) => {
   const closePopup = () => {
     setSelectedAssignment(null);
   };
+
+  if (!allowAssignments) {
+    return (
+      <div>
+        <h3 className="text-lg font-bold mb-4">Assignments / Tasks</h3>
+        <p className="text-gray-600">No assignments available for your course.</p>
+      </div>
+    );
+  }
 
   return (
     <div>

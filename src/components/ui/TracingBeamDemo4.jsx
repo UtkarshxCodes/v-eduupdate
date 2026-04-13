@@ -36,7 +36,7 @@ export function TracingBeamDemo4() {
 const trends = [
   {
     badge: "AI & Automation",
-    title: "AI Talent Demand Surges in 2025",
+    title: "AI Talent Demand Surges in 2026",
     image: "https://img.freepik.com/premium-vector/trends-word-lettering-illustration_9233-256.jpg?w=2000",
     content: (
       <>
@@ -47,7 +47,7 @@ const trends = [
           are prioritizing candidates with AI project experience.
         </p>
         <ul>
-          <li>Job postings requiring AI skills grew 8.1% in 2024.</li>
+          <li>Job postings requiring AI skills grew 8.1% in 2025.</li>
           <li>AI salaries outpace other tech roles by 20–25%.</li>
           <li>73% of hiring managers prefer candidates with AI project portfolios.</li>
         </ul>
@@ -74,7 +74,7 @@ const trends = [
         <ul>
           <li>
             Global cybersecurity job openings projected to reach 3.5 million in
-            2025.
+            2026.
           </li>
           <li>Cloud security and ethical hacking are among the most in-demand skills.</li>
           <li>Cybersecurity roles pay an average of 18% higher than IT roles.</li>
@@ -88,7 +88,7 @@ const trends = [
   },
   {
     badge: "Data Science",
-    title: "From Data to Decisions: Why Analytics Skills Rule 2025",
+    title: "From Data to Decisions: Why Analytics Skills Rule 2026",
     image: "https://static.vecteezy.com/system/resources/previews/047/231/119/original/marketing-research-abstract-concept-illustration-vector.jpg",
     content: (
       <>

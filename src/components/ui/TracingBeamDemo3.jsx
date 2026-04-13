@@ -6,7 +6,7 @@ const guides = [
 	{
 		badge: "AI & Careers",
 		title: "AI Skills: Your Ticket to a Future-Proof Career",
-		date: "8/26/2025 • 14 min read",
+		date: "8/26/2026 • 14 min read",
 		image:
 			"https://images.pexels.com/photos/8294652/pexels-photo-8294652.jpeg",
 		summary: (
@@ -34,8 +34,8 @@ const guides = [
 	},
 	{
 		badge: "Cybersecurity & Careers",
-		title: "Cybersecurity in 2025: Your Shield, Your Career",
-		date: "9/02/2025 • 15 min read",
+		title: "Cybersecurity in 2026: Your Shield, Your Career",
+		date: "9/02/2026 • 15 min read",
 		image:
 			"https://images.pexels.com/photos/5380646/pexels-photo-5380646.jpeg",
 		summary: (
@@ -48,7 +48,7 @@ const guides = [
 				<h4 className="mt-4 mb-2 font-semibold">Why Cybersecurity is Booming</h4>
 				<ul>
 					<li>
-						Cybercrime damages projected to hit $10.5 trillion annually by 2025
+						Cybercrime damages projected to hit $10.5 trillion annually by 2026
 					</li>
 					<li>3.5M unfilled cybersecurity jobs worldwide</li>
 					<li>
@@ -66,7 +66,7 @@ const guides = [
 	{
 		badge: "Data Science & Careers",
 		title: "From Raw Data to Real Decisions",
-		date: "9/10/2025 • 16 min read",
+		date: "9/10/2026 • 16 min read",
 		image:
 			"https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
 		summary: (
@@ -92,7 +92,7 @@ const guides = [
 	{
 		badge: "DevOps & Cloud Careers",
 		title: "Powering the Future of Tech",
-		date: "9/18/2025 • 13 min read",
+		date: "9/18/2026 • 13 min read",
 		image:
 			"https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
 		summary: (

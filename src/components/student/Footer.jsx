@@ -154,7 +154,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="py-4 text-center text-xs md:text-sm text-gray-600 font-semibold">
-          Copyright 2025 © V-EDU All Rights Reserved.
+          Copyright 2026 © V-EDU All Rights Reserved.
         </p>
       </div>
     </footer>
