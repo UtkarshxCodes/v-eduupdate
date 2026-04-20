@@ -30,7 +30,6 @@ html, body {
 #main {
     position: relative;
     z-index: 10;
-    padding-bottom: 50vh; /* same as footer height */
 }
 
 #page1 {
@@ -328,119 +327,393 @@ nav h3 {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
-    padding: 4vw 0;
+    padding: 4vw 2vw;
 }
 
-.elem {
-    height: 150px;
-    width: 100%;
-    position: relative;
+#elem-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
+.elem-card {
     border-bottom: 1px solid #38383864;
-    overflow: hidden;
+    padding: 2.5vw 0;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.elem-card:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+    padding: 2.5vw 2vw;
+    border-radius: 8px;
+}
+
+.elem-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 2vw;
+    user-select: none;
 }
 
-.elem h2 {
-    font-size: 3vw;
-    position: relative;
-    z-index: 9;
+.elem-header h2 {
+    font-size: 2.2vw;
+    margin: 0;
+    color: #1a1a1a;
+    font-weight: 500;
+    transition: color ease 0.3s;
 }
 
-.elem .overlay {
-    height: 100%;
-    width: 100%;
-    background-color: orange;
-    position: absolute;
-    left: 0;
-    top: -100%;
-    transition: all ease 0.25s;
+.elem-card:hover .elem-header h2 {
+    color: #2563eb;
 }
 
-.elem:hover .overlay {
-    top: 0;
+.elem-icon {
+    font-size: 2.5vw;
+    color: #2563eb;
+    font-weight: 300;
+    transition: transform ease 0.3s;
+    min-width: 40px;
+    text-align: right;
+}
+
+.elem-card.active .elem-icon {
+    transform: rotate(45deg);
+}
+
+.elem-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height ease 0.4s;
+    opacity: 0;
+}
+
+.elem-card.active .elem-content {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 1.5vw;
+}
+
+.elem-content p {
+    font-size: 1.1vw;
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+    font-weight: 300;
+}
+
+@media (max-width: 900px) {
+    .elem-card {
+        padding: 3vw 0;
+    }
+
+    .elem-header h2 {
+        font-size: 3.5vw;
+    }
+
+    .elem-content p {
+        font-size: 3vw;
+        line-height: 1.5;
+    }
+
+    .elem-icon {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #page3 {
+        padding: 5vw 4vw;
+    }
+
+    .elem-card {
+        padding: 4vw 0;
+    }
+
+    .elem-header h2 {
+        font-size: 4.5vw;
+    }
+
+    .elem-content p {
+        font-size: 3.5vw;
+        line-height: 1.5;
+    }
+
+    .elem-icon {
+        font-size: 5vw;
+    }
 }
 
 #fixed-image {
-    height: 30vw;
-    width: 24vw;
-    /* background-color: red; */
-    border-radius: 15px;
-    position: fixed;
-    z-index: 99;
-    left: 50%;
-    top: 25%;
-    display: none;
-    background-size: cover;
-    background-position: center;
+    display: none !important;
 }
 
 #page4 {
-    height: 70vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
-    padding: 10vw 2vw;
+    padding: 5vw 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    width: 30%;
-    border-left: 1px solid #aeadad;
-    padding: 0 2vw;
+.page4-heading {
+    font-size: 3.5vw;
+    text-align: center;
+    margin-bottom: 4vw;
+    color: #1a1a1a;
+    font-weight: 500;
 }
 
 #page4 .page4-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5vw;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .page4-left {
-  flex: 1;
-  max-width: 40%;
+    flex: 1;
+    min-width: 0;
 }
 
-.page4-left h2 {
-  font-size: 2.5vw;
-  margin-bottom: 1vw;
+.cert-display {
+    background: white;
+    border-radius: 16px;
+    padding: 2vw;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 50px;
 }
 
-.page4-left p {
-  font-size: 1.2vw;
-  color: #333;
+.cert-image {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2vw;
+}
+
+.cert-info {
+    text-align: center;
+}
+
+.cert-info h3 {
+    font-size: 1.5vw;
+    color: #1a1a1a;
+    margin-bottom: 1vw;
+    line-height: 1.4;
+}
+
+.cert-price {
+    font-size: 2.2vw;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 1.5vw;
+}
+
+.cert-enroll-btn {
+    width: 100%;
+    padding: 1.2vw;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+}
+
+.cert-enroll-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4);
 }
 
 .page4-right {
-  flex: 1;
-  display: flex;
-  gap: 2vw;
-  justify-content: flex-end;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
 }
 
-.certificate-img {
-  display: block;
-  max-width: 100%;
-  max-height: 320px;   /* or 45vw for responsive, but NOT both width and height */
-  width: auto;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  object-fit: contain;
-  background: #fff;
-  margin-bottom: 1vw;
+.certification-card {
+    background: white;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 2vw;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    position: relative;
+    overflow: hidden;
 }
+
+.certification-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+    transition: left ease 0.5s;
+}
+
+.certification-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.15);
+    transform: translateX(8px);
+}
+
+.certification-card:hover::before {
+    left: 100%;
+}
+
+.certification-card.active {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(96, 165, 250, 0.08));
+    border-color: #2563eb;
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.2);
+}
+
+.cert-card-header {
+    margin-bottom: 1vw;
+}
+
+.cert-card-header h4 {
+    font-size: 1.4vw;
+    color: #1a1a1a;
+    margin: 0 0 0.5vw 0;
+    font-weight: 600;
+}
+
+.cert-badge {
+    font-size: 0.9vw;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+    padding: 0.4vw 0.8vw;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0;
+    font-weight: 500;
+}
+
+.cert-description {
+    font-size: 1vw;
+    color: #666;
+    margin-bottom: 1.2vw;
+    line-height: 1.4;
+}
+
+.cert-meta {
+    display: flex;
+    gap: 1vw;
+}
+
+.cert-level,
+.cert-duration {
+    font-size: 0.85vw;
+    color: #888;
+    padding: 0.5vw 0.8vw;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+@media (max-width: 1200px) {
+    #page4 .page4-content {
+        flex-direction: column;
+        gap: 3vw;
+    }
+
+    .cert-display {
+        position: static;
+    }
+
+    .page4-right {
+        width: 100%;
+    }
+}
+
 @media (max-width: 900px) {
-  #page4 .page4-content { flex-direction: column; align-items: flex-start; }
-  .page4-right { justify-content: flex-start; }
-  .certificate-img { width: 45vw; }
-  .page4-left, .page4-right { max-width: 100%; }
+    .page4-heading {
+        font-size: 4.5vw;
+    }
+
+    .cert-info h3 {
+        font-size: 2vw;
+    }
+
+    .cert-price {
+        font-size: 2.8vw;
+    }
+
+    .cert-card-header h4 {
+        font-size: 2vw;
+    }
+
+    .cert-description {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #page4 {
+        padding: 5vw 3vw;
+    }
+
+    .page4-heading {
+        font-size: 6vw;
+        margin-bottom: 3vw;
+    }
+
+    #page4 .page4-content {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .cert-image {
+        height: 300px;
+    }
+
+    .cert-info h3 {
+        font-size: 3.5vw;
+    }
+
+    .cert-price {
+        font-size: 4vw;
+        margin-bottom: 2vw;
+    }
+
+    .cert-enroll-btn {
+        padding: 2vw;
+        font-size: 2vw;
+    }
+
+    .certification-card {
+        padding: 3vw;
+    }
+
+    .cert-card-header h4 {
+        font-size: 3vw;
+    }
+
+    .cert-badge {
+        font-size: 2vw;
+        padding: 0.8vw 1.5vw;
+    }
+
+    .cert-description {
+        font-size: 2.5vw;
+    }
+
+    .cert-level,
+    .cert-duration {
+        font-size: 1.8vw;
+        padding: 0.8vw 1.2vw;
+    }
 }
 #page5 {
     height: 100vh;

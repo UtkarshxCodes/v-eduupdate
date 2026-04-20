@@ -4,23 +4,58 @@ const scroll = new LocomotiveScroll({
 });
 
 
-function page4Animation() {
-    var elemC = document.querySelector("#elem-container")
-    var fixed = document.querySelector("#fixed-image")
-    elemC.addEventListener("mouseenter", function () {
-        fixed.style.display = "block"
-    })
-    elemC.addEventListener("mouseleave", function () {
-        fixed.style.display = "none"
-    })
+function certificationSelector() {
+    var cards = document.querySelectorAll(".certification-card");
+    var certImage = document.getElementById("cert-image");
+    var certName = document.getElementById("cert-name");
+    var certPrice = document.getElementById("cert-price");
 
-    var elems = document.querySelectorAll(".elem")
-    elems.forEach(function (e) {
-        e.addEventListener("mouseenter", function () {
-            var image = e.getAttribute("data-image")
-            fixed.style.backgroundImage = `url(${image})`
-        })
-    })
+    cards.forEach(function(card) {
+        card.addEventListener("click", function() {
+            cards.forEach(function(c) {
+                c.classList.remove("active");
+            });
+            card.classList.add("active");
+
+            var name = card.getAttribute("data-name");
+            var price = card.getAttribute("data-price");
+            var image = card.getAttribute("data-image");
+
+            certName.textContent = name;
+            certPrice.textContent = price;
+            certImage.src = image;
+            certImage.alt = name;
+        });
+    });
+}
+
+function page3DropdownAnimation() {
+    var cards = document.querySelectorAll(".elem-card");
+    cards.forEach(function(card) {
+        card.addEventListener("click", function() {
+            cards.forEach(function(c) {
+                if (c !== card) {
+                    c.classList.remove("active");
+                }
+            });
+            card.classList.toggle("active");
+        });
+    });
+}
+
+function page4Animation() {
+    var elemC = document.querySelector("#elem-container");
+    if (elemC) {
+        var fixed = document.querySelector("#fixed-image");
+        if (fixed) {
+            elemC.addEventListener("mouseenter", function () {
+                fixed.style.display = "block"
+            })
+            elemC.addEventListener("mouseleave", function () {
+                fixed.style.display = "none"
+            })
+        }
+    }
 }
 
 function swiperAnimation() {
@@ -53,10 +88,12 @@ function loaderAnimation() {
     var loader = document.querySelector("#loader")
     setTimeout(function () {
         loader.style.top = "-100%"
-    }, 4200)
+    }, 1000)
 }
 
 swiperAnimation()
+page3DropdownAnimation()
 page4Animation()
+certificationSelector()
 menuAnimation()
 loaderAnimation()
