@@ -22,19 +22,39 @@ const ReturnPolicyPage = () => {
       >
         ×
       </button>
-      <h2 className="text-2xl font-bold mb-4">Return & Cancellation Policy</h2>
-      <p className="text-sm text-gray-700 mb-4">Effective 2025</p>
+
+      <h2 className="text-2xl font-bold mb-4">
+        Return & Cancellation Policy
+      </h2>
+
+      <p className="text-sm text-gray-700 mb-4">Effective 2026</p>
+
       <p className="text-sm text-gray-700 mb-4">
         At V-EDU.us LLC, we are committed to ensuring a smooth and trustworthy
         experience for our learners. We understand that plans may change, and we
-        offer a straightforward cancellation and refund process for your peace of
-        mind.
+        aim to keep our cancellation policy clear and transparent.
       </p>
+
       <p className="text-sm text-gray-700 mb-4">
-        <strong>Full Refund on Course Registration:</strong> If you decide not to
-        proceed with your course after registration, you are eligible for a 100%
-        refund of the $199 registration amount, no questions asked.
+        <strong>Registration Fee Refund Policy:</strong> Only the{" "}
+        <strong>$199 registration amount</strong> is eligible for refund.
+        Tuition fees, course fees, installment payments, or any other amounts
+        paid beyond the registration fee are non-refundable.
       </p>
+
+      <p className="text-sm text-gray-700 mb-4">
+        <strong>One-to-One Class Commencement Policy:</strong> Once your first
+        scheduled one-to-one class has commenced, the registration fee remains
+        refundable only within the first <strong>7 calendar days</strong> from
+        the date of that class.
+      </p>
+
+      <p className="text-sm text-gray-700 mb-4">
+        After 7 days from the commencement of the first one-to-one class,{" "}
+        <strong>no refund of any kind will be issued</strong>, including the
+        registration fee.
+      </p>
+
       <p className="text-sm text-gray-700 mb-4">
         <strong>How to Cancel and Request a Refund:</strong> Please email us at{" "}
         <a
@@ -43,34 +63,43 @@ const ReturnPolicyPage = () => {
         >
           support@v-edu.us
         </a>{" "}
-        with your full name, registered email address, and payment confirmation or
-        reference number. Refunds will be processed to your original payment method
-        within 5–7 business days after confirmation.
+        with your full name, registered email address, and payment confirmation
+        or reference number.
       </p>
+
       <p className="text-sm text-gray-700 mb-4">
-        <strong>Important Notes:</strong> Refund requests must be submitted before
-        the course begins or before any course material is accessed. If course
-        access has already been granted or live sessions attended, refund
-        eligibility may be reviewed on a case-by-case basis. Any third-party
-        processing fees (if applicable) may be deducted from the refunded amount.
+        Approved refunds will be processed to the original payment method within{" "}
+        <strong>5–7 business days</strong> after confirmation.
       </p>
+
+      <p className="text-sm text-gray-700 mb-4">
+        <strong>Important Notes:</strong> Refund requests must be submitted
+        within the eligible refund period stated above. Access to course
+        materials, classes, live sessions, or services beyond the registration
+        stage may affect eligibility. Any applicable third-party payment
+        processing fees may be deducted where permitted.
+      </p>
+
       <p className="text-sm text-gray-700 mb-4">
         <strong>Contact Us:</strong>
-        <br />📧 Email:{" "}
+        <br />
+        📧 Email:{" "}
         <a
           href="mailto:support@v-edu.us"
           className="text-blue-600 hover:underline"
         >
           support@v-edu.us
         </a>
-        <br />📞 Phone:{" "}
+        <br />
+        📞 Phone:{" "}
         <a
-          href="tel:(307)-216-4424"
+          href="tel:+18883444990"
           className="text-blue-600 hover:underline"
         >
           +1 (888) 344-4990
         </a>
-        <br />🏢 Address: 1908 Thomes Ave STE 12363, Cheyenne, WY 82001
+        <br />
+        🏢 Address: 1908 Thomes Ave STE 12363, Cheyenne, WY 82001
       </p>
     </div>
   );

@@ -52,7 +52,6 @@ const Home = () => {
           <CoverDemo />
           <ThreeDCardDemo />
           <ThreeDCardDemo2 />
-          <ThreeDCardDemo3 />
           <HeroHighlightDemo />
           <FloatingDockDemo />
         </div>
@@ -65,7 +64,6 @@ const Home = () => {
           <CoverDemo />
           <ThreeDCardDemo />
           <ThreeDCardDemo2 />
-          <ThreeDCardDemo3 />
           <HeroHighlightDemo />
           <FloatingDockDemo />
         </div>

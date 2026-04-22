@@ -23,7 +23,7 @@ const PrivacyPolicyPage = () => {
         ×
       </button>
       <h2 className="text-2xl font-bold mb-4">Privacy Policy</h2>
-      <p className="text-sm text-gray-700 mb-2">Effective: 2025</p>
+      <p className="text-sm text-gray-700 mb-2">Effective: 2026</p>
       <p className="text-sm text-gray-700 mb-6">Entity: V-EDU us LLC</p>
 
       <p className="text-base text-gray-800 mb-4">

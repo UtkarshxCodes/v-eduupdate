@@ -7,9 +7,7 @@ const careers = [
   { to: "/careers/cyber", label: "Cyber Security & Ethical Hack" },
   { to: "/careers/data", label: "Data Science & AI" },
   { to: "/careers/cloud", label: "Cloud Computing & DevOps" },
-  { to: "/careers/digital", label: "Digital Marketing & Growth" },
-  { to: "/careers/fullstack", label: "Fullstack Software Dev" },
-  { to: "/careers/uiux", label: "UI & UX Design" },
+  
 ];
 
 const whyChooseUs = [
