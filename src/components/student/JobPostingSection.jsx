@@ -5,9 +5,41 @@ import './JobPostingSection.css';
 
 const JobPostingSection = () => {
   const [expandedId, setExpandedId] = useState(null);
+  const [formState, setFormState] = useState({}); // { [jobId]: { name, email, phone, coverLetter, applied } }
 
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);
+  };
+
+  const handleInputChange = (jobId, field, value) => {
+    setFormState((prev) => ({
+      ...prev,
+      [jobId]: {
+        ...prev[jobId],
+        [field]: value,
+      },
+    }));
+  };
+
+  const handleApply = (job) => {
+    // Compose mailto link
+    const form = formState[job.id] || {};
+    const subject = encodeURIComponent(`Job Application: ${job.role} at ${job.company}`);
+    const body = encodeURIComponent(
+      `Job Role: ${job.role} at ${job.company}\n` +
+      `Name: ${form.name || ''}\n` +
+      `Email: ${form.email || ''}\n` +
+      `Phone: ${form.phone || ''}\n` +
+      `Cover Letter:\n${form.coverLetter || ''}`
+    );
+    window.location.href = `mailto:support@v-edu.us?subject=${subject}&body=${body}`;
+    setFormState((prev) => ({
+      ...prev,
+      [job.id]: {
+        ...prev[job.id],
+        applied: true,
+      },
+    }));
   };
 
   return (
@@ -143,57 +175,188 @@ const JobPostingSection = () => {
               </div>
             </div>
 
-            {/* EXPANDED SECTION */}
+
+            {/* EXPANDED SECTION - Enhanced Details & Apply Form */}
             {expandedId === job.id && (
               <div
                 style={{
                   padding: '1.5rem',
                   background: '#f9fafb',
                   borderTop: '1px solid #e5e7eb',
-                  borderRadius: '0 0 8px 8px'
+                  borderRadius: '0 0 8px 8px',
+                  marginBottom: '1.5rem',
                 }}
               >
+                {/* --- Job Details --- */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ fontWeight: 700, fontSize: '1.3rem', marginBottom: 10 }}>Description</h3>
+                  <p style={{ color: '#444', marginBottom: 18 }}>{job.description}</p>
 
-                <h4>Full Description</h4>
-                <p>{job.description}</p>
+                  {job.responsibilities && job.responsibilities.length > 0 && (
+                    <>
+                      <h3 style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>Responsibilities</h3>
+                      <ul style={{ marginBottom: 18, paddingLeft: 20 }}>
+                        {job.responsibilities.map((r, i) => (
+                          <li key={i} style={{ marginBottom: 6, color: '#555', fontSize: '1rem' }}>{r}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
 
-                <h4>Qualifications</h4>
-                <ul>
-                  {job.qualifications.map((q, i) => (
-                    <li key={i}>{q}</li>
-                  ))}
-                </ul>
+                  {job.skills && job.skills.length > 0 && (
+                    <>
+                      <h3 style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>Skills</h3>
+                      <div style={{ marginBottom: 18 }}>
+                        {job.skills.map((s, i) => (
+                          <span
+                            key={i}
+                            style={{
+                              marginRight: '8px',
+                              marginBottom: '6px',
+                              display: 'inline-block',
+                              background: '#dbeafe',
+                              padding: '5px 10px',
+                              borderRadius: '15px',
+                              fontSize: '0.95rem',
+                              color: '#1e293b',
+                            }}
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    </>
+                  )}
 
-                <h4>Responsibilities</h4>
-                <ul>
-                  {job.responsibilities.map((r, i) => (
-                    <li key={i}>{r}</li>
-                  ))}
-                </ul>
+                  {job.qualifications && job.qualifications.length > 0 && (
+                    <>
+                      <h3 style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>Qualifications</h3>
+                      <ul style={{ marginBottom: 18, paddingLeft: 20 }}>
+                        {job.qualifications.map((q, i) => (
+                          <li key={i} style={{ marginBottom: 6, color: '#555', fontSize: '1rem' }}>{q}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
 
-                <h4>Skills</h4>
-                <div style={{ marginBottom: '10px' }}>
-                  {job.skills.map((s, i) => (
-                    <span
-                      key={i}
-                      style={{
-                        marginRight: '8px',
-                        marginBottom: '6px',
-                        display: 'inline-block',
-                        background: '#dbeafe',
-                        padding: '5px 10px',
-                        borderRadius: '15px',
-                        fontSize: '0.85rem'
-                      }}
-                    >
-                      {s}
-                    </span>
-                  ))}
+                  {job.education && (
+                    <>
+                      <h3 style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 8 }}>Education</h3>
+                      <p style={{ color: '#555', marginBottom: 0 }}>{job.education}</p>
+                    </>
+                  )}
                 </div>
 
-                <h4>Education</h4>
-                <p>{job.education}</p>
-
+                {/* --- Apply Form --- */}
+                <div
+                  style={{
+                    background: '#fff',
+                    border: '1px solid #e5e7eb',
+                    borderRadius: 8,
+                    padding: '1.2rem 1rem',
+                    maxWidth: 500,
+                    margin: '0 auto',
+                    boxShadow: '0 2px 8px rgba(80,120,200,0.06)',
+                  }}
+                >
+                  <h3 style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 14, color: '#2563eb' }}>Apply for this job</h3>
+                  <form
+                    onSubmit={e => {
+                      e.preventDefault();
+                      handleApply(job);
+                    }}
+                  >
+                    <div style={{ marginBottom: 12 }}>
+                      <label style={{ display: 'block', fontWeight: 500, marginBottom: 4 }}>Name<span style={{ color: '#f04a0c' }}> *</span></label>
+                      <input
+                        type="text"
+                        required
+                        value={(formState[job.id]?.name) || ''}
+                        onChange={e => handleInputChange(job.id, 'name', e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '8px',
+                          border: '1px solid #d1d5db',
+                          borderRadius: 5,
+                          fontSize: '1rem',
+                        }}
+                        disabled={formState[job.id]?.applied}
+                      />
+                    </div>
+                    <div style={{ marginBottom: 12 }}>
+                      <label style={{ display: 'block', fontWeight: 500, marginBottom: 4 }}>Email<span style={{ color: '#f04a0c' }}> *</span></label>
+                      <input
+                        type="email"
+                        required
+                        value={(formState[job.id]?.email) || ''}
+                        onChange={e => handleInputChange(job.id, 'email', e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '8px',
+                          border: '1px solid #d1d5db',
+                          borderRadius: 5,
+                          fontSize: '1rem',
+                        }}
+                        disabled={formState[job.id]?.applied}
+                      />
+                    </div>
+                    <div style={{ marginBottom: 12 }}>
+                      <label style={{ display: 'block', fontWeight: 500, marginBottom: 4 }}>Phone Number<span style={{ color: '#f04a0c' }}> *</span></label>
+                      <input
+                        type="tel"
+                        required
+                        value={(formState[job.id]?.phone) || ''}
+                        onChange={e => handleInputChange(job.id, 'phone', e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '8px',
+                          border: '1px solid #d1d5db',
+                          borderRadius: 5,
+                          fontSize: '1rem',
+                        }}
+                        disabled={formState[job.id]?.applied}
+                      />
+                    </div>
+                    <div style={{ marginBottom: 16 }}>
+                      <label style={{ display: 'block', fontWeight: 500, marginBottom: 4 }}>Cover Letter<span style={{ color: '#f04a0c' }}> *</span></label>
+                      <textarea
+                        required
+                        rows={4}
+                        value={(formState[job.id]?.coverLetter) || ''}
+                        onChange={e => handleInputChange(job.id, 'coverLetter', e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '8px',
+                          border: '1px solid #d1d5db',
+                          borderRadius: 5,
+                          fontSize: '1rem',
+                          resize: 'vertical',
+                        }}
+                        disabled={formState[job.id]?.applied}
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      style={{
+                        width: '100%',
+                        background: formState[job.id]?.applied ? '#a7f3d0' : 'linear-gradient(90deg, #2563eb 30%, #059669 100%)',
+                        color: formState[job.id]?.applied ? '#059669' : '#fff',
+                        fontWeight: 700,
+                        padding: '10px 0',
+                        border: 'none',
+                        borderRadius: 6,
+                        fontSize: '1.1rem',
+                        cursor: formState[job.id]?.applied ? 'not-allowed' : 'pointer',
+                        transition: 'background 0.2s',
+                        marginTop: 6,
+                        marginBottom: 0,
+                      }}
+                      disabled={formState[job.id]?.applied}
+                    >
+                      {formState[job.id]?.applied ? 'Applied' : 'Apply'}
+                    </button>
+                  </form>
+                </div>
               </div>
             )}
 
