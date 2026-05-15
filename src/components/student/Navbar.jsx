@@ -186,8 +186,10 @@ const Navbar = ({ jobsRef }) => {
           >
             Call
           </a>
-          <Link
-            to="/lms-login"
+          <a
+            href="https://lms.v-edu.us"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-blue-600 text-white px-4 py-1 font-bold shadow hover:bg-blue-700 transition rounded-full"
             style={{
               fontSize: '15px',
@@ -196,7 +198,7 @@ const Navbar = ({ jobsRef }) => {
             }}
           >
             LMS
-          </Link>
+          </a>
           {user && (
             <>
               <Link to="/my-enrollments" className="hover:text-blue-600 transition">My Enrollments</Link>
