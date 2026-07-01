@@ -48,7 +48,6 @@ const Home = () => {
           <SheryIframe />
           <TimelineDemo />
           <FlipWordsDemo />
-          <AnimatedTestimonialsDemo />
           <CoverDemo />
           <ThreeDCardDemo />
           <ThreeDCardDemo2 />
@@ -68,7 +67,7 @@ const Home = () => {
           <FloatingDockDemo />
         </div>
       </div>
-      <DraggableCardDemo />
+      {/* <DraggableCardDemo /> */}
       <Footer />
     </div>
   );
