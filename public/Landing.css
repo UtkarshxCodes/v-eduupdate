@@ -949,7 +949,7 @@ nav h3 {
         width: 62vw;
         position: absolute;
         border-radius: 50%;
-        background: linear-gradient(to top right, #ff5c0b, #ff5c0b);
+        background: linear-gradient(to top right, #0b27ff, #0baaff);
         /* background: linear-gradient(to top right,red,blue); */
 
 
@@ -2548,18 +2548,11 @@ PROJECT CARD ANIMATIONS
     opacity:0;
     transform:translateY(60px);
     transition:all .8s ease;
-    will-change:transform,opacity;
 }
 
 .project-card.show-project{
     opacity:1;
     transform:translateY(0);
-}
-
-@media(max-width:768px){
-    .project-card{
-        will-change:auto;
-    }
 }
 
 /*=========================================

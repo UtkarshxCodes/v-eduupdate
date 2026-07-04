@@ -102,29 +102,35 @@ loaderAnimation()
 // PROJECT CARD INTERACTIONS
 // ===============================================
 
-// 1. Card Hover Animation
+// 1. Card Hover Animation (Desktop only)
 const projectCards = document.querySelectorAll(".project-card");
 
-projectCards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-15px) scale(1.02)";
-    });
+if(window.innerWidth > 768){
+    projectCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "translateY(-15px) scale(1.02)";
+        });
 
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "";
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "";
+        });
     });
-});
+}
 
-// 2. Smooth Fade-in on Scroll
+// 2. Smooth Fade-in on Scroll - SIMPLIFIED
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px'
+};
+
 const observer = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
             entry.target.classList.add("show-project");
+            observer.unobserve(entry.target);
         }
     });
-},{
-    threshold:0.15
-});
+}, observerOptions);
 
 document.querySelectorAll(".project-card").forEach(card=>{
     observer.observe(card);
@@ -145,14 +151,6 @@ document.querySelectorAll(".project-btn").forEach(btn=>{
     });
 });
 
-// 4. Floating Glow Effect
-setInterval(()=>{
-    document.querySelectorAll(".project-card").forEach(card=>{
-        card.style.boxShadow=
-        `0 20px ${25+Math.random()*25}px rgba(37,99,235,.15)`;
-    });
-},1800);
-
 // 5. Tilt Effect on Mouse Move (Desktop only)
 if(window.innerWidth > 768){
     projectCards.forEach(card=>{
@@ -172,9 +170,11 @@ if(window.innerWidth > 768){
     });
 }
 
-// Refresh LocomotiveScroll after all animations are loaded
-setTimeout(()=>{
-    if(scroll && typeof scroll.update === 'function'){
-        scroll.update();
-    }
-}, 1500);
+// Refresh LocomotiveScroll after DOM is ready
+window.addEventListener('load', ()=>{
+    setTimeout(()=>{
+        if(scroll && typeof scroll.update === 'function'){
+            scroll.update();
+        }
+    }, 500);
+});
