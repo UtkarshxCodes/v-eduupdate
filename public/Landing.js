@@ -97,3 +97,84 @@ page4Animation()
 certificationSelector()
 menuAnimation()
 loaderAnimation()
+
+// ===============================================
+// PROJECT CARD INTERACTIONS
+// ===============================================
+
+// 1. Card Hover Animation
+const projectCards = document.querySelectorAll(".project-card");
+
+projectCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-15px) scale(1.02)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
+    });
+});
+
+// 2. Smooth Fade-in on Scroll
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show-project");
+        }
+    });
+},{
+    threshold:0.15
+});
+
+document.querySelectorAll(".project-card").forEach(card=>{
+    observer.observe(card);
+});
+
+// 3. Ripple Effect on Button
+document.querySelectorAll(".project-btn").forEach(btn=>{
+    btn.addEventListener("click",function(e){
+        let circle=document.createElement("span");
+        circle.className="ripple";
+        let rect=this.getBoundingClientRect();
+        circle.style.left=e.clientX-rect.left+"px";
+        circle.style.top=e.clientY-rect.top+"px";
+        this.appendChild(circle);
+        setTimeout(()=>{
+            circle.remove();
+        },600);
+    });
+});
+
+// 4. Floating Glow Effect
+setInterval(()=>{
+    document.querySelectorAll(".project-card").forEach(card=>{
+        card.style.boxShadow=
+        `0 20px ${25+Math.random()*25}px rgba(37,99,235,.15)`;
+    });
+},1800);
+
+// 5. Tilt Effect on Mouse Move (Desktop only)
+if(window.innerWidth > 768){
+    projectCards.forEach(card=>{
+        card.addEventListener("mousemove",(e)=>{
+            const rect=card.getBoundingClientRect();
+            const x=e.clientX-rect.left;
+            const y=e.clientY-rect.top;
+            const rotateY=((x/rect.width)-0.5)*8;
+            const rotateX=((rect.height/2-y)/rect.height)*8;
+            card.style.transform=
+            `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+        });
+
+        card.addEventListener("mouseleave",()=>{
+            card.style.transform="";
+        });
+    });
+}
+
+// Refresh LocomotiveScroll after all animations are loaded
+setTimeout(()=>{
+    if(scroll && typeof scroll.update === 'function'){
+        scroll.update();
+    }
+}, 1500);
