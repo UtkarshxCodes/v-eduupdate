@@ -1,0 +1,114 @@
+.fab{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:999999;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+}
+
+/* Hidden by default */
+.fab-item{
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+    background:#fff;
+    color:#2563eb;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+    font-size:24px;
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,.15);
+
+    animation:slideUp .28s ease;
+
+    transition:.25s;
+}
+
+.fab-item:hover{
+    transform:scale(1.08);
+    background:#2563eb;
+    color:#fff;
+}
+
+.fab-main{
+    width:64px;
+    height:64px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    box-shadow:
+      0 12px 35px rgba(0,0,0,.18);
+
+    transition:.25s;
+}
+
+.fab-main:hover{
+    transform:scale(1.08);
+}
+
+.fab-main img{
+    width:40px;
+    height:40px;
+}
+
+.fab-main.open{
+    transform:scale(1.05);
+}
+
+@keyframes slideUp{
+
+    from{
+        opacity:0;
+        transform:translateY(18px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .fab{
+        right:16px;
+        bottom:16px;
+    }
+
+    .fab-main{
+        width:60px;
+        height:60px;
+    }
+
+    .fab-item{
+        width:52px;
+        height:52px;
+        font-size:22px;
+    }
+
+    .fab-main img{
+        width:36px;
+        height:36px;
+    }
+
+}

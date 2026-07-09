@@ -15,6 +15,7 @@ import { ThreeDCardDemo2 } from '../../components/ui/ThreeDCardDemo2';
 import { ThreeDCardDemo3 } from '../../components/ui/ThreeDCardDemo3';
 import Hero from '../../components/student/Hero';
 import Hero2 from '../../components/student/Hero2';
+import FloatingContact from "../../components/FloatingContact";
 
 const Home = () => {
   const jobsRef = useRef(null);
@@ -39,37 +40,41 @@ const Home = () => {
   }, [scrollToJobs, scrollToQuiz]);
 
   return (
-    <div className="overflow-x-hidden w-full">
-      {/* Normal homepage content (DNS overlay removed) */}
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-16">
-        {/* Mobile view */}
-        <div className="block md:hidden flex flex-col items-center space-y-7 text-center">
-          <Hero2 />
-          <SheryIframe />
-          <TimelineDemo />
-          <FlipWordsDemo />
-          <CoverDemo />
-          <ThreeDCardDemo />
-          <ThreeDCardDemo2 />
-          <HeroHighlightDemo />
-          <FloatingDockDemo />
+    <>
+      <div className="overflow-x-hidden w-full">
+        {/* Normal homepage content (DNS overlay removed) */}
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-16">
+          {/* Mobile view */}
+          <div className="block md:hidden flex flex-col items-center space-y-7 text-center">
+            <Hero2 />
+            <SheryIframe />
+            <TimelineDemo />
+            <FlipWordsDemo />
+            <CoverDemo />
+            <ThreeDCardDemo />
+            <ThreeDCardDemo2 />
+            <HeroHighlightDemo />
+            <FloatingDockDemo />
+          </div>
+          {/* Desktop view */}
+          <div className="hidden md:flex flex-col items-center space-y-7 text-center">
+            <SheryIframe />
+            <HeroParallaxDemo />
+            <SliderSection />
+            <TimelineDemo />
+            <CoverDemo />
+            <ThreeDCardDemo />
+            <ThreeDCardDemo2 />
+            <HeroHighlightDemo />
+            <FloatingDockDemo />
+          </div>
         </div>
-        {/* Desktop view */}
-        <div className="hidden md:flex flex-col items-center space-y-7 text-center">
-          <SheryIframe />
-          <HeroParallaxDemo />
-          <SliderSection />
-          <TimelineDemo />
-          <CoverDemo />
-          <ThreeDCardDemo />
-          <ThreeDCardDemo2 />
-          <HeroHighlightDemo />
-          <FloatingDockDemo />
-        </div>
+        {/* <DraggableCardDemo /> */}
+        <Footer />
       </div>
-      {/* <DraggableCardDemo /> */}
-      <Footer />
-    </div>
+
+      <FloatingContact />
+    </>
   );
 };
 
